@@ -9,6 +9,9 @@
  *
  * 값이 "준비중"이면 모달에서 해당 채널 버튼이 비활성화됩니다.
  * 실제 URL/ID 입력 시 버튼이 활성화됩니다.
+ *
+ * 채널톡 상담창 연동은 js/channel-config.js 의 pluginKey를 사용합니다.
+ * 상담 버튼 클릭 시 ChannelIO('showMessenger')가 실행됩니다.
  */
 window.SOAEG_CONTACT = {
   phone: "010-0000-0000",

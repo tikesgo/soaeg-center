@@ -362,7 +362,7 @@ textarea {
   position: relative;
   overflow: hidden;
   padding-top: calc(var(--header-h) + 28px);
-  padding-bottom: 44px;
+  padding-bottom: 144px;
   background: linear-gradient(165deg, var(--hero-bg-start) 0%, var(--hero-bg-mid) 52%, var(--hero-bg-end) 100%);
   color: var(--white);
 }
@@ -495,13 +495,28 @@ textarea {
   letter-spacing: 0.02em;
 }
 
-.hero__content h1 {
-  margin: 0 0 18px;
-  font-size: clamp(2.1rem, 4.8vw, 2.95rem);
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 20px;
+}
+
+.hero__title-line {
+  font-size: clamp(2.35rem, 5.4vw, 3.35rem);
   font-weight: 900;
-  line-height: 1.12;
-  letter-spacing: -0.035em;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
   color: var(--white);
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.18);
+}
+
+.hero__title-accent {
+  font-size: clamp(1.18rem, 2.6vw, 1.5rem);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+  color: var(--accent);
 }
 
 .hero__lead {
@@ -522,6 +537,12 @@ textarea {
   min-height: 54px;
   padding: 0 26px;
   font-size: 1.02rem;
+}
+
+.hero__btn--kakao.btn--lg {
+  min-height: 62px;
+  padding: 0 30px;
+  font-size: 1.17rem;
 }
 
 .hero__checks {
@@ -802,9 +823,10 @@ textarea {
 }
 
 .consult-form--hero h2 {
-  font-size: 2.15rem;
-  margin-bottom: 6px;
+  font-size: 1.72rem;
+  margin-bottom: 10px;
   letter-spacing: -0.03em;
+  line-height: 1.25;
 }
 
 .consult-form--hero .consult-form__sub {
@@ -813,6 +835,21 @@ textarea {
   font-weight: 600;
   color: var(--text-muted);
   line-height: 1.55;
+}
+
+.consult-form--hero .consult-form__sub--badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-bottom: 22px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #eef4ff;
+  border: 1px solid rgba(43, 99, 217, 0.18);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.2;
 }
 
 .consult-form--hero .form-row {
@@ -881,170 +918,14 @@ textarea {
   color: var(--text);
 }
 
-/* Contact modal */
-body.modal-open {
-  overflow: hidden;
-}
-
-.contact-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 16px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
-}
-
-.contact-modal.is-open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.contact-modal__backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(15, 23, 36, 0.55);
-}
-
-.contact-modal__dialog {
-  position: relative;
-  width: min(420px, 100%);
-  max-height: calc(100vh - 40px);
-  overflow-y: auto;
-  padding: 28px 24px 24px;
-  border-radius: calc(var(--radius) + 2px);
-  background: var(--white);
-  box-shadow: var(--shadow-card-inset), 0 24px 64px rgba(15, 23, 36, 0.22);
-  outline: none;
-}
-
-.contact-modal__close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 36px;
-  height: 36px;
-  border: none;
-  border-radius: 8px;
-  background: var(--bg);
-  color: var(--text-muted);
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.contact-modal__close:hover {
-  background: var(--primary-light);
-  color: var(--primary);
-}
-
-.contact-modal__dialog h2 {
-  margin: 0 0 12px;
-  padding-right: 36px;
-  font-size: 1.35rem;
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  color: var(--text);
-}
-
-.contact-modal__lead {
-  margin: 0 0 20px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1.65;
-  color: var(--text-muted);
-}
-
-.contact-modal__list {
-  list-style: none;
-  margin: 0 0 22px;
-  padding: 0;
-  display: grid;
-  gap: 10px;
-}
-
-.contact-modal__list li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 14px 16px;
-  border-radius: 12px;
-  background: #f8fafc;
-  border: 1px solid var(--line);
-}
-
-.contact-modal__label {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--text-muted);
-}
-
-.contact-modal__value {
-  font-size: 1rem;
-  font-weight: 800;
-  color: var(--text);
-}
-
-.contact-modal__value--pending {
+.consult-card__channels strong.is-pending {
   color: #9ca3af;
   font-weight: 700;
-}
-
-.contact-modal__actions {
-  display: grid;
-  gap: 12px;
-}
-
-.contact-modal__btn {
-  min-height: 56px;
-  padding: 0 18px;
-  font-size: 1.02rem;
-  font-weight: 800;
-}
-
-.contact-modal__btn.is-disabled,
-.contact-modal__btn:disabled {
-  opacity: 0.48;
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
 }
 
 .btn--accent.is-disabled,
 .btn--accent:disabled {
   background: #e8c84a;
-}
-
-.btn--telegram.is-disabled,
-.btn--telegram:disabled {
-  background: #8ecae8;
-}
-
-.btn--telegram {
-  background: #2aabee;
-  color: var(--white);
-  box-shadow: 0 4px 14px rgba(42, 171, 238, 0.28);
-}
-
-.btn--telegram:hover {
-  background: #2299d6;
-}
-
-.btn--modal-close {
-  background: var(--bg);
-  color: var(--text-muted);
-  border: 1px solid var(--line);
-  box-shadow: none;
-}
-
-.btn--modal-close:hover {
-  background: #eef2f7;
-  color: var(--text);
 }
 
 .form-row {
@@ -1194,31 +1075,35 @@ body.modal-open {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
   border-radius: 50%;
-  color: #2b63d9;
 }
 
-.trust-bar__icon--shield,
-.trust-bar__icon--phone,
-.trust-bar__icon--clock {
-  background: #eef4ff;
+.trust-bar__icon--shield {
+  background: #dbeafe;
+}
+
+.trust-bar__icon--phone {
+  background: #e0e7ff;
 }
 
 .trust-bar__icon--kakao {
-  background: #fff4cc;
+  background: #fef9c3;
 }
 
 .trust-bar__icon--fast {
-  background: #fff0e6;
-  color: #e07a32;
+  background: #ffedd5;
+}
+
+.trust-bar__icon--clock {
+  background: #ede9fe;
 }
 
 .trust-bar__icon svg {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   display: block;
 }
 
@@ -2362,8 +2247,27 @@ body.modal-open {
   }
 
   .hero {
-    padding-top: calc(var(--header-h) + 20px);
-    padding-bottom: 36px;
+    padding-top: calc(var(--header-h) + 28px);
+    padding-bottom: 136px;
+  }
+
+  .hero__title {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .hero__title-line {
+    font-size: clamp(1.95rem, 7.2vw, 2.45rem);
+  }
+
+  .hero__title-accent {
+    font-size: clamp(1.05rem, 4.2vw, 1.2rem);
+  }
+
+  .hero__btn--kakao.btn--lg {
+    min-height: 56px;
+    padding: 0 24px;
+    font-size: 1.05rem;
   }
 
   .hero__lead {
@@ -2431,7 +2335,13 @@ body.modal-open {
   }
 
   .consult-form--hero h2 {
-    font-size: 1.9rem;
+    font-size: 1.42rem;
+  }
+
+  .consult-form--hero .consult-form__sub--badge {
+    font-size: 0.88rem;
+    padding: 7px 12px;
+    margin-bottom: 18px;
   }
 
   .consult-form--hero .consult-form__sub {
@@ -2444,27 +2354,6 @@ body.modal-open {
 
   .consult-form--hero .btn--submit-hero {
     font-size: 1.2rem;
-  }
-
-  .contact-modal {
-    padding: 16px 12px;
-    align-items: flex-end;
-  }
-
-  .contact-modal__dialog {
-    width: 100%;
-    padding: 24px 20px 20px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .contact-modal__actions {
-    gap: 12px;
-  }
-
-  .contact-modal__btn {
-    min-height: 52px;
-    font-size: 1.05rem;
   }
 
   .trust-bar__text strong {

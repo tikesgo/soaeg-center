@@ -77,7 +77,10 @@
       <section class="hero" aria-labelledby="heroTitle">
         <div class="container hero__grid">
           <div class="hero__content">
-            <h1 id="heroTitle">휴대폰 소액결제 현금화 상담</h1>
+            <h1 id="heroTitle" class="hero__title">
+              <span class="hero__title-line">휴대폰 소액결제 현금화 상담</span>
+              <span class="hero__title-accent">빠르고 안전하게 안내받으세요</span>
+            </h1>
             <p class="hero__lead">
               정책 제한으로 진행이 어려우신가요?<br />
               통신사 한도 확인부터<br />
@@ -85,7 +88,7 @@
               소액센터가 빠르게 안내해드립니다.
             </p>
             <div class="hero__actions">
-              <a class="btn btn--accent btn--lg btn--cta-strong hero__btn" href="#" data-contact-modal>카톡 상담하기</a>
+              <a class="btn btn--accent btn--lg btn--cta-strong hero__btn hero__btn--kakao" href="#" data-contact-modal>카톡 상담하기</a>
               <a class="btn btn--white-hero btn--lg hero__btn" href="#" data-contact-modal>상담 신청하기</a>
             </div>
             <ul class="hero__checks" aria-label="상담 안내">
@@ -97,8 +100,8 @@
           </div>
 
           <aside class="consult-form consult-form--compact consult-form--hero consult-card" id="consult" aria-labelledby="consultCardTitle">
-            <h2 id="consultCardTitle">상담 안내</h2>
-            <p class="consult-form__sub">전화 · 카카오톡 · 텔레그램으로<br />빠르게 문의해 주세요.</p>
+            <h2 id="consultCardTitle">📞 지금 바로 상담 가능</h2>
+            <p class="consult-form__sub consult-form__sub--badge">365일 상담 접수</p>
             <ul class="consult-card__channels" aria-label="상담 채널">
               <li><span>전화</span><strong data-contact-value="phone"></strong></li>
               <li><span>카카오톡</span><strong data-contact-value="kakao"></strong></li>
@@ -115,8 +118,15 @@
             <li class="trust-bar__item trust-bar__item--blue">
               <span class="trust-bar__icon trust-bar__icon--shield" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="currentColor" fill-opacity="0.22" d="M12 3l8 3v6c0 5.2-3.6 8.9-8 9.6-4.4-.7-8-4.4-8-9.6V6l8-3z" />
-                  <path d="M12 3l8 3v6c0 5.2-3.6 8.9-8 9.6-4.4-.7-8-4.4-8-9.6V6l8-3z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" />
+                  <path d="M12 2.5l7.5 2.8v5.9c0 4.6-3.2 7.9-7.5 8.5-4.3-.6-7.5-3.9-7.5-8.5V5.3L12 2.5z" fill="#3B82F6" />
+                  <path d="M12 2.5l7.5 2.8v5.9c0 4.6-3.2 7.9-7.5 8.5-4.3-.6-7.5-3.9-7.5-8.5V5.3L12 2.5z" fill="url(#tbShield)" />
+                  <path d="M9.5 12.2l1.8 1.8 3.7-3.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <defs>
+                    <linearGradient id="tbShield" x1="4.5" y1="2.5" x2="19.5" y2="19.7" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#60A5FA" />
+                      <stop offset="1" stop-color="#2563EB" />
+                    </linearGradient>
+                  </defs>
                 </svg>
               </span>
               <div class="trust-bar__text">
@@ -127,9 +137,16 @@
             <li class="trust-bar__item trust-bar__item--white">
               <span class="trust-bar__icon trust-bar__icon--phone" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="6" y="2" width="12" height="20" rx="2.5" fill="currentColor" fill-opacity="0.2" />
-                  <rect x="6" y="2" width="12" height="20" rx="2.5" stroke="currentColor" stroke-width="1.75" />
-                  <line x1="12" y1="18" x2="12" y2="18.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="url(#tbPhone)" />
+                  <rect x="8.5" y="5" width="7" height="12.5" rx="1" fill="#C7D2FE" />
+                  <rect x="10" y="6.5" width="4" height="1.2" rx="0.6" fill="#6366F1" opacity="0.5" />
+                  <circle cx="12" cy="18.5" r="1" fill="#fff" />
+                  <defs>
+                    <linearGradient id="tbPhone" x1="7" y1="2.5" x2="17" y2="21.5" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#818CF8" />
+                      <stop offset="1" stop-color="#4F46E5" />
+                    </linearGradient>
+                  </defs>
                 </svg>
               </span>
               <div class="trust-bar__text">
@@ -140,8 +157,11 @@
             <li class="trust-bar__item trust-bar__item--kakao">
               <span class="trust-bar__icon trust-bar__icon--kakao" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="currentColor" fill-opacity="0.28" d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-                  <path d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" />
+                  <path d="M20.5 11.2c0 4.03-3.7 7.3-8.25 7.3-1.01 0-1.98-.15-2.85-.41L5 20.5l1.65-3.85C5.62 15.55 5 13.95 5 12.2 5 8.17 8.7 5 13.25 5S20.5 7.17 20.5 11.2z" fill="#FEE500" />
+                  <path d="M20.5 11.2c0 4.03-3.7 7.3-8.25 7.3-1.01 0-1.98-.15-2.85-.41L5 20.5l1.65-3.85C5.62 15.55 5 13.95 5 12.2 5 8.17 8.7 5 13.25 5S20.5 7.17 20.5 11.2z" stroke="#E5C100" stroke-width="0.75" />
+                  <ellipse cx="9.8" cy="11.2" rx="1.1" ry="1.25" fill="#3C1E1E" />
+                  <ellipse cx="13.25" cy="11.2" rx="1.1" ry="1.25" fill="#3C1E1E" />
+                  <ellipse cx="16.7" cy="11.2" rx="1.1" ry="1.25" fill="#3C1E1E" />
                 </svg>
               </span>
               <div class="trust-bar__text">
@@ -152,8 +172,14 @@
             <li class="trust-bar__item trust-bar__item--blue">
               <span class="trust-bar__icon trust-bar__icon--fast" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="currentColor" fill-opacity="0.25" d="M13 2L4 14h7l-1 8 10-14h-7l0-6z" />
-                  <path d="M13 2L4 14h7l-1 8 10-14h-7l0-6z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" />
+                  <path d="M13.2 2.2L3.8 14.2h6.4l-2.1 7.6L20.2 9.8h-6.4l-.6-7.6z" fill="url(#tbBolt)" />
+                  <path d="M13.8 5.5l-5.2 7h3.4l-.9 3.3 5.8-7.5h-3.4l.3-2.8z" fill="#FDE68A" opacity="0.85" />
+                  <defs>
+                    <linearGradient id="tbBolt" x1="3.8" y1="2.2" x2="20.2" y2="21.8" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#FBBF24" />
+                      <stop offset="1" stop-color="#EA580C" />
+                    </linearGradient>
+                  </defs>
                 </svg>
               </span>
               <div class="trust-bar__text">
@@ -164,9 +190,16 @@
             <li class="trust-bar__item trust-bar__item--white">
               <span class="trust-bar__icon trust-bar__icon--clock" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.2" />
-                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.75" />
-                  <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="12" cy="12" r="9" fill="url(#tbClock)" />
+                  <circle cx="12" cy="12" r="7.2" fill="#DDD6FE" opacity="0.35" />
+                  <path d="M12 7.5v4.8l3.2 2.1" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="12" cy="12" r="1.2" fill="#fff" />
+                  <defs>
+                    <linearGradient id="tbClock" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#A78BFA" />
+                      <stop offset="1" stop-color="#7C3AED" />
+                    </linearGradient>
+                  </defs>
                 </svg>
               </span>
               <div class="trust-bar__text">
@@ -388,39 +421,44 @@
       <a class="btn btn--primary" href="#" data-contact-modal>상담신청</a>
     </div>
 
-    <div class="contact-modal" id="contactModal" hidden aria-hidden="true">
-      <div class="contact-modal__backdrop" data-contact-close tabindex="-1"></div>
-      <div class="contact-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" tabindex="-1">
-        <button class="contact-modal__close" type="button" data-contact-close aria-label="닫기">×</button>
-        <h2 id="contactModalTitle">상담 연락처 안내</h2>
-        <p class="contact-modal__lead">
-          상담을 원하시면 아래 연락처로 문의해 주세요.<br />
-          빠른 확인 후 안내드리겠습니다.
-        </p>
-        <ul class="contact-modal__list">
-          <li>
-            <span class="contact-modal__label">전화 상담</span>
-            <strong class="contact-modal__value" data-contact-value="phone"></strong>
-          </li>
-          <li>
-            <span class="contact-modal__label">카카오톡 ID</span>
-            <strong class="contact-modal__value" data-contact-value="kakao"></strong>
-          </li>
-          <li>
-            <span class="contact-modal__label">텔레그램 ID</span>
-            <strong class="contact-modal__value" data-contact-value="telegram"></strong>
-          </li>
-        </ul>
-        <div class="contact-modal__actions">
-          <a class="btn btn--primary btn--lg btn--block contact-modal__btn" data-contact-tel href="#">전화 걸기</a>
-          <button class="btn btn--accent btn--lg btn--block contact-modal__btn" type="button" data-contact-channel="kakao">카카오톡 상담</button>
-          <button class="btn btn--telegram btn--lg btn--block contact-modal__btn" type="button" data-contact-channel="telegram">텔레그램 문의</button>
-          <button class="btn btn--modal-close btn--lg btn--block contact-modal__btn" type="button" data-contact-close>닫기</button>
-        </div>
-      </div>
-    </div>
-
     <script src="js/contact-config.js" defer></script>
+    <script src="js/channel-config.js" defer></script>
+    <script>
+      (function () {
+        var w = window;
+        if (w.ChannelIO) {
+          return;
+        }
+        var ch = function () {
+          ch.c(arguments);
+        };
+        ch.q = [];
+        ch.c = function (args) {
+          ch.q.push(args);
+        };
+        w.ChannelIO = ch;
+        function loadChannelScript() {
+          if (w.ChannelIOInitialized) {
+            return;
+          }
+          w.ChannelIOInitialized = true;
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
+          var x = document.getElementsByTagName("script")[0];
+          if (x.parentNode) {
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+        if (document.readyState === "complete") {
+          loadChannelScript();
+        } else {
+          w.addEventListener("DOMContentLoaded", loadChannelScript);
+          w.addEventListener("load", loadChannelScript);
+        }
+      })();
+    </script>
     <script src="js/main.js" defer></script>
   </body>
 </html>

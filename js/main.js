@@ -8,6 +8,8 @@
     pendingLabel: "준비중",
   };
 
+  var CHANNEL = window.SOAEG_CHANNEL || { pluginKey: "" };
+
   var PENDING = CONFIG.pendingLabel || "준비중";
 
   function $(selector, root) {
@@ -18,31 +20,39 @@
     return Array.prototype.slice.call((root || document).querySelectorAll(selector));
   }
 
-  function phoneToTel(phone) {
-    return "tel:" + String(phone).replace(/\D/g, "");
+  function getChannelPluginKey() {
+    return String(CHANNEL.pluginKey || "").trim();
   }
 
-  function isChannelReady(value) {
+  function isChannelTalkEnabled() {
+    return getChannelPluginKey() !== "";
+  }
+
+  function isContactValueReady(value) {
     return Boolean(value && String(value).trim() !== "" && String(value).trim() !== PENDING);
   }
 
-  function resolveChannelUrl(channel, value) {
-    var trimmed = String(value).trim();
-
-    if (trimmed.indexOf("http://") === 0 || trimmed.indexOf("https://") === 0) {
-      return trimmed;
+  function initChannelTalk() {
+    if (!isChannelTalkEnabled() || !window.ChannelIO) {
+      return;
     }
 
-    if (channel === "telegram") {
-      var handle = trimmed.replace(/^@/, "");
-      return "https://t.me/" + handle;
+    ChannelIO("boot", {
+      pluginKey: getChannelPluginKey(),
+    });
+  }
+
+  function openChannelMessenger() {
+    if (!window.ChannelIO) {
+      return;
     }
 
-    if (channel === "kakao") {
-      return trimmed;
-    }
+    ChannelIO("showMessenger");
+  }
 
-    return "";
+  function openConsultation() {
+    openChannelMessenger();
+    closeMobileNavIfOpen();
   }
 
   function applyContactValues() {
@@ -62,59 +72,27 @@
 
       el.textContent = value;
 
-      if (field === "phone") {
-        el.classList.remove("contact-modal__value--pending");
-        return;
+      if (field !== "phone") {
+        el.classList.toggle("is-pending", !isContactValueReady(value));
       }
-
-      el.classList.toggle("contact-modal__value--pending", !isChannelReady(value));
-    });
-
-    $all("[data-contact-tel]").forEach(function (link) {
-      link.setAttribute("href", phoneToTel(CONFIG.phone));
-    });
-  }
-
-  function setupChannelButtons() {
-    var channels = [
-      { key: "kakao", configKey: "kakaoId", selector: "[data-contact-channel='kakao']" },
-      { key: "telegram", configKey: "telegramId", selector: "[data-contact-channel='telegram']" },
-    ];
-
-    channels.forEach(function (channel) {
-      var value = CONFIG[channel.configKey];
-      var ready = isChannelReady(value);
-
-      $all(channel.selector).forEach(function (btn) {
-        btn.disabled = !ready;
-        btn.classList.toggle("is-disabled", !ready);
-        btn.setAttribute("aria-disabled", ready ? "false" : "true");
-
-        if (!ready) {
-          return;
-        }
-
-        btn.addEventListener("click", function () {
-          var url = resolveChannelUrl(channel.key, value);
-
-          if (url.indexOf("http") === 0) {
-            window.open(url, "_blank", "noopener,noreferrer");
-            return;
-          }
-
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(value);
-          }
-        });
-      });
     });
   }
 
   applyContactValues();
-  setupChannelButtons();
+  initChannelTalk();
 
   var menuToggle = $("[data-menu-toggle]");
   var mobileNav = $("[data-mobile-nav]");
+
+  function closeMobileNavIfOpen() {
+    if (mobileNav && mobileNav.classList.contains("is-open")) {
+      mobileNav.classList.remove("is-open");
+      if (menuToggle) {
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "메뉴 열기");
+      }
+    }
+  }
 
   if (menuToggle && mobileNav) {
     menuToggle.addEventListener("click", function () {
@@ -135,69 +113,10 @@
     });
   }
 
-  var contactModal = $("#contactModal");
-  var lastFocusedElement = null;
-
-  function openContactModal() {
-    if (!contactModal) {
-      return;
-    }
-
-    lastFocusedElement = document.activeElement;
-    contactModal.hidden = false;
-    contactModal.setAttribute("aria-hidden", "false");
-    contactModal.classList.add("is-open");
-    document.body.classList.add("modal-open");
-
-    var dialog = $(".contact-modal__dialog", contactModal);
-    if (dialog) {
-      dialog.focus();
-    }
-
-    if (mobileNav && mobileNav.classList.contains("is-open")) {
-      mobileNav.classList.remove("is-open");
-      if (menuToggle) {
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "메뉴 열기");
-      }
-    }
-  }
-
-  function closeContactModal() {
-    if (!contactModal || contactModal.hidden) {
-      return;
-    }
-
-    contactModal.classList.remove("is-open");
-    contactModal.hidden = true;
-    contactModal.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("modal-open");
-
-    if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
-      lastFocusedElement.focus();
-    }
-  }
-
   $all("[data-contact-modal]").forEach(function (trigger) {
     trigger.addEventListener("click", function (event) {
       event.preventDefault();
-      openContactModal();
-    });
-  });
-
-  if (contactModal) {
-    $all("[data-contact-close]", contactModal).forEach(function (el) {
-      el.addEventListener("click", function () {
-        closeContactModal();
-      });
-    });
-  }
-
-  $all("[data-call]").forEach(function (btn) {
-    btn.addEventListener("click", function (event) {
-      if (!confirm("전화 상담 " + CONFIG.phone + " 으로 연결하시겠습니까?")) {
-        event.preventDefault();
-      }
+      openConsultation();
     });
   });
 
@@ -226,24 +145,17 @@
   }
 
   document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      if (contactModal && contactModal.classList.contains("is-open")) {
-        closeContactModal();
-        return;
-      }
-
-      if (mobileNav && mobileNav.classList.contains("is-open")) {
-        mobileNav.classList.remove("is-open");
-        if (menuToggle) {
-          menuToggle.setAttribute("aria-expanded", "false");
-          menuToggle.setAttribute("aria-label", "메뉴 열기");
-          menuToggle.focus();
-        }
+    if (event.key === "Escape" && mobileNav && mobileNav.classList.contains("is-open")) {
+      mobileNav.classList.remove("is-open");
+      if (menuToggle) {
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "메뉴 열기");
+        menuToggle.focus();
       }
     }
   });
 
   if (window.location.hash === "#open-contact") {
-    openContactModal();
+    openConsultation();
   }
 })();
