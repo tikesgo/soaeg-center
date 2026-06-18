@@ -361,10 +361,30 @@ textarea {
 .hero {
   position: relative;
   overflow: hidden;
-  padding-top: calc(var(--header-h) + 28px);
-  padding-bottom: 144px;
-  background: linear-gradient(165deg, var(--hero-bg-start) 0%, var(--hero-bg-mid) 52%, var(--hero-bg-end) 100%);
-  color: var(--white);
+  padding-top: calc(var(--header-h) + 24px);
+  padding-bottom: 48px;
+  background: #f5f8ff;
+  color: var(--text);
+}
+
+.hero__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero__visual {
+  min-width: 0;
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  object-fit: contain;
 }
 
 .hero__decor {
@@ -609,12 +629,6 @@ textarea {
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.75);
   font-weight: 600;
-}
-
-.hero__visual {
-  display: none;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero__scene {
@@ -2119,7 +2133,7 @@ textarea {
   }
 
   .hero__grid {
-    grid-template-columns: minmax(0, 1.05fr) minmax(340px, 48%);
+    grid-template-columns: minmax(0, 62%) minmax(300px, 38%);
     align-items: center;
     gap: 24px;
   }
@@ -2132,11 +2146,6 @@ textarea {
   .hero__trust-card {
     font-size: 0.72rem;
     padding: 16px 8px;
-  }
-
-  .hero__content {
-    grid-column: 1;
-    grid-row: 1;
   }
 
   .consult-form {
@@ -2213,7 +2222,7 @@ textarea {
 
 @media (min-width: 1024px) {
   .hero__grid {
-    grid-template-columns: minmax(0, 1fr) min(450px, 41%);
+    grid-template-columns: minmax(0, 65%) minmax(300px, 35%);
     align-items: center;
     gap: 28px;
   }
@@ -2247,45 +2256,17 @@ textarea {
   }
 
   .hero {
-    padding-top: calc(var(--header-h) + 28px);
-    padding-bottom: 136px;
+    padding-top: calc(var(--header-h) + 16px);
+    padding-bottom: 32px;
   }
 
-  .hero__title {
-    gap: 10px;
-    margin-bottom: 16px;
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .hero__title-line {
-    font-size: clamp(1.95rem, 7.2vw, 2.45rem);
-  }
-
-  .hero__title-accent {
-    font-size: clamp(1.05rem, 4.2vw, 1.2rem);
-  }
-
-  .hero__btn--kakao.btn--lg {
-    min-height: 56px;
-    padding: 0 24px;
-    font-size: 1.05rem;
-  }
-
-  .hero__lead {
-    font-size: 0.98rem;
-    line-height: 1.95;
-  }
-
-  .hero__checks {
-    gap: 10px 14px;
-    margin-top: 20px;
-  }
-
-  .hero__checks li {
-    font-size: 0.9rem;
-  }
-
-  .hero__actions .btn {
-    flex: 1 1 auto;
+  .hero__image {
+    border-radius: 18px;
   }
 
   .consult-form {
