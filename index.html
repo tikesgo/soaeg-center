@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>휴대폰 소액결제 현금화 방법 | 소액센터</title>
+    <meta
+      name="description"
+      content="소액센터는 휴대폰 소액결제, 정책 문제, 한도 확인, 이용 방법을 쉽게 안내하는 상담 랜딩페이지입니다."
+    />
+    <meta
+      name="keywords"
+      content="휴대폰 소액결제 현금화, 소액결제 현금화, 소액결제 정책, 소액결제 한도, 소액결제 미납, 정보이용료 현금화, 콘텐츠이용료 현금화"
+    />
+    <!-- TODO: SEO URL은 SITE_URL.txt / js/site-config.js 와 동기화 (Vercel 도메인) -->
+    <link rel="canonical" href="https://REPLACE-VERCEL-URL.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://REPLACE-VERCEL-URL.vercel.app/" />
+    <meta property="og:title" content="휴대폰 소액결제 현금화 방법 | 소액센터" />
+    <meta
+      property="og:description"
+      content="소액센터는 휴대폰 소액결제, 정책 문제, 한도 확인, 이용 방법을 쉽게 안내하는 상담 랜딩페이지입니다."
+    />
+    <meta property="og:image" content="https://REPLACE-VERCEL-URL.vercel.app/images/og-preview.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="hero-tone-c">
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-logo" href="index.html" aria-label="소액센터 홈">
+          <span class="site-logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 8.5C6 6.57 7.57 5 9.5 5h13C24.43 5 26 6.57 26 8.5v9.5c0 1.93-1.57 3.5-3.5 3.5h-7.2L10 26.5V21.5H9.5C7.57 21.5 6 19.93 6 18V8.5z" fill="url(#logoBubble)" />
+              <path d="M13.2 11.8c0-.94.76-1.7 1.7-1.7h2.2c.94 0 1.7.76 1.7 1.7v.2c0 .72-.44 1.36-1.1 1.62.72.24 1.24.94 1.24 1.78V18c0 .94-.76 1.7-1.7 1.7h-2.2c-.94 0-1.7-.76-1.7-1.7v-1.3c0-.84.52-1.54 1.24-1.78-.66-.26-1.1-.9-1.1-1.62v-.2z" fill="#fff" fill-opacity="0.95" />
+              <defs>
+                <linearGradient id="logoBubble" x1="6" y1="5" x2="26" y2="27" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#5B8FEF" />
+                  <stop offset="1" stop-color="#2B63D9" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <strong>소액센터</strong>
+        </a>
+        <nav class="site-nav" aria-label="주요 메뉴">
+          <a href="#services">서비스 소개</a>
+          <a href="guide/">이용 방법</a>
+          <a href="policy/">정책 및 해결방법</a>
+          <a href="limit/">한도 확인</a>
+          <a href="#reviews">상담 사례</a>
+          <a href="faq/">FAQ</a>
+          <a href="#footer-contact">고객센터</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn--accent btn--cta-strong" href="#" data-contact-modal>카톡상담</a>
+          <a class="btn btn--primary btn--consult-short" href="#" data-contact-modal>빠른 상담신청</a>
+          <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobileNav" aria-label="메뉴 열기">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav" data-mobile-nav aria-label="모바일 메뉴">
+      <a href="#services">서비스 소개</a>
+      <a href="guide/">이용 방법</a>
+      <a href="policy/">정책 및 해결방법</a>
+      <a href="limit/">한도 확인</a>
+      <a href="#reviews">상담 사례</a>
+      <a href="faq/">FAQ</a>
+      <a href="#footer-contact">고객센터</a>
+      <div class="mobile-nav__actions">
+        <a class="btn btn--accent btn--block btn--cta-strong" href="#" data-contact-modal>카톡상담</a>
+        <a class="btn btn--primary btn--block" href="#" data-contact-modal>빠른 상담신청</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <h1 id="heroTitle">휴대폰 소액결제 현금화 상담</h1>
+            <p class="hero__lead">
+              정책 제한으로 진행이 어려우신가요?<br />
+              통신사 한도 확인부터<br />
+              미납 · 차단 · 정책 제한 상담까지<br />
+              소액센터가 빠르게 안내해드립니다.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--accent btn--lg btn--cta-strong hero__btn" href="#" data-contact-modal>카톡 상담하기</a>
+              <a class="btn btn--white-hero btn--lg hero__btn" href="#" data-contact-modal>상담 신청하기</a>
+            </div>
+            <ul class="hero__checks" aria-label="상담 안내">
+              <li><span class="hero__check-icon" aria-hidden="true">🛡</span>정책 제한 상담</li>
+              <li><span class="hero__check-icon" aria-hidden="true">📱</span>통신사 한도 확인</li>
+              <li><span class="hero__check-icon" aria-hidden="true">🚫</span>미납 · 차단 문의</li>
+              <li><span class="hero__check-icon" aria-hidden="true">⏰</span>365일 상담</li>
+            </ul>
+          </div>
+
+          <aside class="consult-form consult-form--compact consult-form--hero consult-card" id="consult" aria-labelledby="consultCardTitle">
+            <h2 id="consultCardTitle">상담 안내</h2>
+            <p class="consult-form__sub">전화 · 카카오톡 · 텔레그램으로<br />빠르게 문의해 주세요.</p>
+            <ul class="consult-card__channels" aria-label="상담 채널">
+              <li><span>전화</span><strong data-contact-value="phone"></strong></li>
+              <li><span>카카오톡</span><strong data-contact-value="kakao"></strong></li>
+              <li><span>텔레그램</span><strong data-contact-value="telegram"></strong></li>
+            </ul>
+            <button class="btn btn--primary btn--lg btn--block btn--submit-hero" type="button" data-contact-modal>연락처 확인하기</button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="trust-bar" aria-label="신뢰 안내">
+        <div class="container">
+          <ul class="trust-bar__list">
+            <li class="trust-bar__item trust-bar__item--blue">
+              <span class="trust-bar__icon trust-bar__icon--shield" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" fill-opacity="0.22" d="M12 3l8 3v6c0 5.2-3.6 8.9-8 9.6-4.4-.7-8-4.4-8-9.6V6l8-3z" />
+                  <path d="M12 3l8 3v6c0 5.2-3.6 8.9-8 9.6-4.4-.7-8-4.4-8-9.6V6l8-3z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <div class="trust-bar__text">
+                <strong>정책 제한 상담</strong>
+                <span>제한 사유 확인 및 안내</span>
+              </div>
+            </li>
+            <li class="trust-bar__item trust-bar__item--white">
+              <span class="trust-bar__icon trust-bar__icon--phone" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="6" y="2" width="12" height="20" rx="2.5" fill="currentColor" fill-opacity="0.2" />
+                  <rect x="6" y="2" width="12" height="20" rx="2.5" stroke="currentColor" stroke-width="1.75" />
+                  <line x1="12" y1="18" x2="12" y2="18.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div class="trust-bar__text">
+                <strong>통신사 한도 확인</strong>
+                <span>SKT · KT · LG U+ 조회 안내</span>
+              </div>
+            </li>
+            <li class="trust-bar__item trust-bar__item--kakao">
+              <span class="trust-bar__icon trust-bar__icon--kakao" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" fill-opacity="0.28" d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                  <path d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <div class="trust-bar__text">
+                <strong>카카오톡 상담 가능</strong>
+                <span>실시간 상담 지원</span>
+              </div>
+            </li>
+            <li class="trust-bar__item trust-bar__item--blue">
+              <span class="trust-bar__icon trust-bar__icon--fast" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" fill-opacity="0.25" d="M13 2L4 14h7l-1 8 10-14h-7l0-6z" />
+                  <path d="M13 2L4 14h7l-1 8 10-14h-7l0-6z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <div class="trust-bar__text">
+                <strong>빠른 상담 진행</strong>
+                <span>당일 안내 지원</span>
+              </div>
+            </li>
+            <li class="trust-bar__item trust-bar__item--white">
+              <span class="trust-bar__icon trust-bar__icon--clock" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.2" />
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.75" />
+                  <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <div class="trust-bar__text">
+                <strong>365일 상담</strong>
+                <span>연중 무휴 상담</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--white" id="services" aria-labelledby="servicesTitle">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="servicesTitle">소액센터 서비스 소개</h2>
+            <p>정책·한도·미납까지 한곳에서 안내받으세요</p>
+          </div>
+          <div class="card-grid">
+            <article class="service-card service-card--compact">
+              <span class="service-card__icon" aria-hidden="true">💳</span>
+              <h3>소액결제 현금화</h3>
+              <p>휴대폰 소액결제 한도 활용 방법과 절차를 상담으로 안내해 드립니다.</p>
+              <a href="guide/mobile-payment-cashout-method/">자세히 보기 →</a>
+            </article>
+            <article class="service-card service-card--compact">
+              <span class="service-card__icon" aria-hidden="true">🔓</span>
+              <h3>정책·미납 해결</h3>
+              <p>통신사별 정책 제한과 미납 관련 문의를 맞춤 상담으로 안내합니다.</p>
+              <a href="policy/">자세히 보기 →</a>
+            </article>
+            <article class="service-card service-card--compact">
+              <span class="service-card__icon" aria-hidden="true">📊</span>
+              <h3>한도 확인·증액</h3>
+              <p>SKT·KT·LG U+ 통신사별 한도 확인 방법을 안내해 드립니다.</p>
+              <a href="limit/">자세히 보기 →</a>
+            </article>
+            <article class="service-card service-card--compact">
+              <span class="service-card__icon" aria-hidden="true">📖</span>
+              <h3>이용 방법 안내</h3>
+              <p>처음 이용하시는 분도 쉽게 따라할 수 있도록 단계별로 설명합니다.</p>
+              <a href="guide/">자세히 보기 →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="process" aria-labelledby="processTitle">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="processTitle">이용 절차</h2>
+            <p>상담 신청부터 안내 완료까지 간단한 4단계</p>
+          </div>
+          <div class="process-layout">
+            <ol class="process-flow">
+              <li class="process-flow__step">
+                <span class="process-flow__num">1</span>
+                <span class="process-flow__icon" aria-hidden="true">💬</span>
+                <h3>상담신청</h3>
+                <p>연락처로 문의</p>
+              </li>
+              <li class="process-flow__arrow" aria-hidden="true"></li>
+              <li class="process-flow__step">
+                <span class="process-flow__num">2</span>
+                <span class="process-flow__icon" aria-hidden="true">📋</span>
+                <h3>상황확인</h3>
+                <p>정책·한도 확인</p>
+              </li>
+              <li class="process-flow__arrow" aria-hidden="true"></li>
+              <li class="process-flow__step">
+                <span class="process-flow__num">3</span>
+                <span class="process-flow__icon" aria-hidden="true">📱</span>
+                <h3>안내진행</h3>
+                <p>맞춤 절차 안내</p>
+              </li>
+              <li class="process-flow__arrow" aria-hidden="true"></li>
+              <li class="process-flow__step">
+                <span class="process-flow__num">4</span>
+                <span class="process-flow__icon" aria-hidden="true">✅</span>
+                <h3>상담완료</h3>
+                <p>안내 종료</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--white" id="info" aria-labelledby="infoTitle">
+        <div class="container">
+          <h2 class="visually-hidden" id="infoTitle">안내 및 상담 사례</h2>
+          <div class="info-grid">
+            <div class="info-panel">
+              <h3>자주 찾는 안내</h3>
+              <div class="tag-grid">
+                <a class="tag-link" href="policy/small-payment-policy/">소액결제 정책이란?</a>
+                <a class="tag-link" href="policy/#unpaid">미납 해결 방법</a>
+                <a class="tag-link" href="limit/">한도 확인 방법</a>
+                <a class="tag-link" href="guide/mobile-payment-cashout-method/">현금화 절차</a>
+                <a class="tag-link" href="faq/#fee">수수료 안내</a>
+                <a class="tag-link" href="policy/">통신사별 정책</a>
+                <a class="tag-link" href="faq/">상담 신청 방법</a>
+                <a class="tag-link" href="faq/">FAQ 전체</a>
+              </div>
+              <a class="info-panel__more" href="faq/">FAQ 더보기 →</a>
+            </div>
+
+            <div class="info-panel" id="reviews">
+              <h3>상담 사례</h3>
+              <ul class="case-list">
+                <li class="case-item">
+                  <div class="case-item__head">
+                    <span class="case-item__tag">정책 제한 문의</span>
+                    <span class="case-item__status">상담 완료</span>
+                  </div>
+                  <p>통신사 정책 제한 관련 상담 후 안내 완료</p>
+                </li>
+                <li class="case-item">
+                  <div class="case-item__head">
+                    <span class="case-item__tag">한도 확인 문의</span>
+                    <span class="case-item__status">안내 완료</span>
+                  </div>
+                  <p>통신사별 한도 확인 방법 안내</p>
+                </li>
+                <li class="case-item">
+                  <div class="case-item__head">
+                    <span class="case-item__tag">미납 관련 문의</span>
+                    <span class="case-item__status">상담 완료</span>
+                  </div>
+                  <p>미납·차단 관련 맞춤 상담 진행</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="info-panel">
+              <h3>최신 안내</h3>
+              <ul class="news-list">
+                <li class="news-item">
+                  <a href="policy/small-payment-policy/">2024년 소액결제 정책 변경 안내</a>
+                  <time datetime="2024-03-15">03.15</time>
+                </li>
+                <li class="news-item">
+                  <a href="limit/">SKT 소액결제 한도 확인 방법</a>
+                  <time datetime="2024-03-10">03.10</time>
+                </li>
+                <li class="news-item">
+                  <a href="guide/mobile-payment-cashout-method/">휴대폰 소액결제 현금화 절차</a>
+                  <time datetime="2024-03-05">03.05</time>
+                </li>
+                <li class="news-item">
+                  <a href="policy/#unpaid">소액결제 미납 해결 가이드</a>
+                  <time datetime="2024-02-28">02.28</time>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bottom-cta bottom-cta--strong" aria-labelledby="bottomCta">
+        <div class="container">
+          <h2 id="bottomCta">휴대폰 소액결제 고민, 소액센터가 빠르고 안전하게 도와드립니다</h2>
+          <p>365일 24시간 상담 접수 · <span data-contact-value="phone"></span></p>
+          <div class="bottom-cta__actions">
+            <a class="btn btn--accent btn--lg btn--cta-strong" href="#" data-contact-modal>카톡 상담</a>
+            <a class="btn btn--white btn--lg" href="#" data-contact-modal>무료 상담 신청</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer-contact">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <strong>소액센터</strong>
+            <p>휴대폰 소액결제 현금화 전문 상담 서비스</p>
+          </div>
+          <div class="footer-col">
+            <h3>서비스</h3>
+            <ul>
+              <li><a href="guide/mobile-payment-cashout-method/">현금화 안내</a></li>
+              <li><a href="policy/">정책 안내</a></li>
+              <li><a href="limit/">한도 확인</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>고객지원</h3>
+            <ul>
+              <li><a href="faq/">FAQ</a></li>
+              <li><a href="#" data-contact-modal>상담 신청</a></li>
+              <li><a href="privacy/">개인정보처리방침</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>안내</h3>
+            <ul>
+              <li><a href="terms/">이용약관</a></li>
+              <li><a href="guide/">이용 방법</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <strong data-contact-value="phone"></strong>
+            <p>365일 24시간 상담</p>
+            <p>카카오톡 상담 가능</p>
+          </div>
+        </div>
+        <p class="footer-legal"><strong>사업자 정보</strong>사업자 정보 준비중</p>
+        <div class="footer-bottom">
+          <span>© 2024 소액센터. All rights reserved.</span>
+          <span>
+            <a href="privacy/">개인정보처리방침</a>
+            <a href="terms/">이용약관</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="float-cta" aria-label="빠른 상담">
+      <a class="btn btn--accent btn--cta-strong" href="#" data-contact-modal>카톡상담</a>
+      <a class="btn btn--primary" href="#" data-contact-modal>상담신청</a>
+    </div>
+
+    <div class="contact-modal" id="contactModal" hidden aria-hidden="true">
+      <div class="contact-modal__backdrop" data-contact-close tabindex="-1"></div>
+      <div class="contact-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" tabindex="-1">
+        <button class="contact-modal__close" type="button" data-contact-close aria-label="닫기">×</button>
+        <h2 id="contactModalTitle">상담 연락처 안내</h2>
+        <p class="contact-modal__lead">
+          상담을 원하시면 아래 연락처로 문의해 주세요.<br />
+          빠른 확인 후 안내드리겠습니다.
+        </p>
+        <ul class="contact-modal__list">
+          <li>
+            <span class="contact-modal__label">전화 상담</span>
+            <strong class="contact-modal__value" data-contact-value="phone"></strong>
+          </li>
+          <li>
+            <span class="contact-modal__label">카카오톡 ID</span>
+            <strong class="contact-modal__value" data-contact-value="kakao"></strong>
+          </li>
+          <li>
+            <span class="contact-modal__label">텔레그램 ID</span>
+            <strong class="contact-modal__value" data-contact-value="telegram"></strong>
+          </li>
+        </ul>
+        <div class="contact-modal__actions">
+          <a class="btn btn--primary btn--lg btn--block contact-modal__btn" data-contact-tel href="#">전화 걸기</a>
+          <button class="btn btn--accent btn--lg btn--block contact-modal__btn" type="button" data-contact-channel="kakao">카카오톡 상담</button>
+          <button class="btn btn--telegram btn--lg btn--block contact-modal__btn" type="button" data-contact-channel="telegram">텔레그램 문의</button>
+          <button class="btn btn--modal-close btn--lg btn--block contact-modal__btn" type="button" data-contact-close>닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/contact-config.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
