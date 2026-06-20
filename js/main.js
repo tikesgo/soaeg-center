@@ -80,58 +80,6 @@
 
   applyContactValues();
   initChannelTalk();
-  initHeroSlider();
-
-  function initHeroSlider() {
-    var slider = $("[data-hero-slider]");
-    if (!slider) {
-      return;
-    }
-
-    var slides = $all(".hero-slider__slide", slider);
-    var dots = $all("[data-hero-dot]", slider);
-    if (slides.length < 2) {
-      return;
-    }
-
-    var current = 0;
-    var intervalMs = 2000;
-    var timer = null;
-
-    function goTo(index) {
-      current = (index + slides.length) % slides.length;
-
-      slides.forEach(function (slide, i) {
-        slide.classList.toggle("is-active", i === current);
-      });
-
-      dots.forEach(function (dot, i) {
-        var isActive = i === current;
-        dot.classList.toggle("is-active", isActive);
-        dot.setAttribute("aria-selected", isActive ? "true" : "false");
-      });
-    }
-
-    function startAuto() {
-      if (timer) {
-        clearInterval(timer);
-      }
-
-      timer = setInterval(function () {
-        goTo(current + 1);
-      }, intervalMs);
-    }
-
-    dots.forEach(function (dot) {
-      dot.addEventListener("click", function () {
-        goTo(Number(dot.getAttribute("data-hero-dot")));
-        startAuto();
-      });
-    });
-
-    goTo(0);
-    startAuto();
-  }
 
   var menuToggle = $("[data-menu-toggle]");
   var mobileNav = $("[data-mobile-nav]");
