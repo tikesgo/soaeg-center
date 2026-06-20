@@ -24,7 +24,7 @@
     <meta property="og:image" content="https://REPLACE-VERCEL-URL.vercel.app/images/og-preview.png" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="hero-tone-c">
+  <body>
     <header class="site-header">
       <div class="container site-header__inner">
         <a class="site-logo" href="index.html" aria-label="소액센터 홈">
@@ -89,43 +89,36 @@
             </p>
             <div class="hero__actions">
               <a class="btn btn--accent btn--lg btn--cta-strong hero__btn hero__btn--kakao" href="#" data-contact-modal>카톡 상담하기</a>
-              <a class="btn btn--white-hero btn--lg hero__btn" href="#process">상담 방법 보기</a>
+              <a class="btn btn--outline btn--lg hero__btn" href="#process">상담 방법 보기</a>
             </div>
           </div>
 
-          <aside class="hero-info-card" aria-labelledby="heroInfoTitle">
-            <h2 id="heroInfoTitle">소액결제 상담 안내</h2>
-            <table class="hero-info-table">
-              <thead>
-                <tr>
-                  <th scope="col">구분</th>
-                  <th scope="col">안내 내용</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">정책 제한</th>
-                  <td>제한 사유 확인 및 상담</td>
-                </tr>
-                <tr>
-                  <th scope="row">통신사 한도</th>
-                  <td>SKT · KT · LG U+ 한도 확인</td>
-                </tr>
-                <tr>
-                  <th scope="row">미납·차단</th>
-                  <td>상태별 상담 안내</td>
-                </tr>
-                <tr>
-                  <th scope="row">상담 방식</th>
-                  <td>채널톡 실시간 상담</td>
-                </tr>
-                <tr>
-                  <th scope="row">운영 시간</th>
-                  <td>365일 상담 접수</td>
-                </tr>
-              </tbody>
-            </table>
-          </aside>
+          <div class="hero-slider" data-hero-slider aria-label="상담 안내 배너">
+            <div class="hero-slider__viewport">
+              <figure class="hero-slider__slide is-active">
+                <img
+                  src="images/hero-slide-1.png"
+                  alt="소액결제 상담 안내"
+                  width="1200"
+                  height="750"
+                  decoding="async"
+                />
+              </figure>
+              <figure class="hero-slider__slide">
+                <img
+                  src="images/hero-slide-2.png"
+                  alt="정책 · 한도 · 미납 상담"
+                  width="1200"
+                  height="750"
+                  decoding="async"
+                />
+              </figure>
+            </div>
+            <div class="hero-slider__dots" role="tablist" aria-label="배너 선택">
+              <button type="button" class="is-active" role="tab" aria-selected="true" aria-label="슬라이드 1" data-hero-dot="0"></button>
+              <button type="button" role="tab" aria-selected="false" aria-label="슬라이드 2" data-hero-dot="1"></button>
+            </div>
+          </div>
         </div>
       </section>
 
