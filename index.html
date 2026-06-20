@@ -24,7 +24,7 @@
     <meta property="og:image" content="https://REPLACE-VERCEL-URL.vercel.app/images/og-preview.png" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body class="hero-layout-a">
     <header class="site-header">
       <div class="container site-header__inner">
         <a class="site-logo" href="index.html" aria-label="소액센터 홈">
@@ -75,28 +75,19 @@
 
     <main>
       <section class="hero" aria-label="메인 비주얼">
-        <div class="container hero__grid">
-          <div class="hero__visual">
-            <img
-              class="hero__image"
-              src="images/hero-visual.png"
-              alt="휴대폰 소액결제 현금화 상담"
-              width="1536"
-              height="1024"
-              decoding="async"
-            />
+        <div class="hero__visual">
+          <img
+            class="hero__image"
+            src="images/hero-visual.png"
+            alt="휴대폰 소액결제 현금화 상담"
+            width="1536"
+            height="1024"
+            decoding="async"
+          />
+          <div class="hero__overlay" aria-label="상담 신청">
+            <a class="btn btn--accent btn--lg btn--cta-strong" href="#" data-contact-modal>카톡 상담하기</a>
+            <a class="btn btn--primary btn--lg" href="#" data-contact-modal>무료 상담 신청</a>
           </div>
-
-          <aside class="consult-form consult-form--compact consult-form--hero consult-card" id="consult" aria-labelledby="consultCardTitle">
-            <h2 id="consultCardTitle">📞 지금 바로 상담 가능</h2>
-            <p class="consult-form__sub consult-form__sub--badge">365일 상담 접수</p>
-            <ul class="consult-card__channels" aria-label="상담 채널">
-              <li><span>전화</span><strong data-contact-value="phone"></strong></li>
-              <li><span>카카오톡</span><strong data-contact-value="kakao"></strong></li>
-              <li><span>텔레그램</span><strong data-contact-value="telegram"></strong></li>
-            </ul>
-            <button class="btn btn--primary btn--lg btn--block btn--submit-hero" type="button" data-contact-modal>연락처 확인하기</button>
-          </aside>
         </div>
       </section>
 

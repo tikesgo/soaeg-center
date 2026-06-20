@@ -361,30 +361,39 @@ textarea {
 .hero {
   position: relative;
   overflow: hidden;
-  padding-top: calc(var(--header-h) + 24px);
-  padding-bottom: 48px;
-  background: #f5f8ff;
+  padding-top: var(--header-h);
+  padding-bottom: 0;
+  background: #ffffff;
   color: var(--text);
 }
 
-.hero__grid {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: 20px;
-  align-items: center;
-}
-
 .hero__visual {
-  min-width: 0;
+  position: relative;
+  width: 100%;
 }
 
 .hero__image {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 24px;
-  object-fit: contain;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  display: flex;
+  position: absolute;
+  right: clamp(16px, 3vw, 40px);
+  bottom: clamp(16px, 3vw, 32px);
+  z-index: 2;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: calc(100% - 32px);
+}
+
+body.hero-layout-a .trust-bar {
+  display: none;
 }
 
 .hero__decor {
@@ -2256,17 +2265,29 @@ textarea {
   }
 
   .hero {
-    padding-top: calc(var(--header-h) + 16px);
-    padding-bottom: 32px;
-  }
-
-  .hero__grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    padding-top: var(--header-h);
+    padding-bottom: 0;
   }
 
   .hero__image {
-    border-radius: 18px;
+    object-fit: contain;
+    background: #f5f8ff;
+  }
+
+  .hero__overlay {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    max-width: none;
+    justify-content: stretch;
+  }
+
+  .hero__overlay .btn {
+    flex: 1 1 calc(50% - 5px);
+    min-height: 48px;
+    padding: 0 12px;
+    font-size: 0.92rem;
   }
 
   .consult-form {
