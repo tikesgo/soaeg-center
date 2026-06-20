@@ -617,40 +617,49 @@ textarea {
   outline-offset: 2px;
 }
 
-.hero__visual {
+.hero-slider {
   width: 100%;
   max-width: none;
   justify-self: stretch;
 }
 
-.hero__image-slot {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
+.hero-slider__viewport {
+  position: relative;
   width: 100%;
   aspect-ratio: 5 / 4;
   margin: 0;
-  padding: 24px;
-  border: 1px dashed #afc4ff;
+  padding: 0;
   border-radius: 24px;
-  background: #eaf1ff;
-  box-shadow: 0 10px 36px rgba(43, 99, 217, 0.08);
-  text-align: center;
+  overflow: hidden;
+  background: #eef3fc;
+  box-shadow: 0 10px 36px rgba(43, 99, 217, 0.1);
+  touch-action: pan-y;
 }
 
-.hero__image-slot-label {
+.hero-slider__slide {
+  position: absolute;
+  inset: 0;
   margin: 0;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #4a6bb5;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 0.65s ease;
+  pointer-events: none;
 }
 
-.hero__image-slot-note {
+.hero-slider__slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-slider__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
   margin: 0;
-  font-size: 0.88rem;
-  color: #7a94c4;
+  padding: 0;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero__checks {
@@ -2256,7 +2265,7 @@ textarea {
     justify-self: center;
   }
 
-  .hero__visual {
+  .hero-slider {
     grid-column: 2;
     grid-row: 1;
     position: sticky;
@@ -2336,7 +2345,7 @@ textarea {
     gap: 32px;
   }
 
-  .hero__visual {
+  .hero-slider {
     margin-top: 0;
   }
 
@@ -2407,7 +2416,7 @@ textarea {
     border-radius: 14px;
   }
 
-  .hero__visual {
+  .hero-slider {
     width: calc(100% + 32px);
     max-width: none;
     justify-self: stretch;
@@ -2415,7 +2424,7 @@ textarea {
     margin-top: 4px;
   }
 
-  .hero__image-slot {
+  .hero-slider__viewport {
     border-radius: 20px;
   }
 

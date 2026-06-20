@@ -80,6 +80,104 @@
 
   applyContactValues();
   initChannelTalk();
+  initHeroSlider();
+
+  function initHeroSlider() {
+    var slider = $("[data-hero-slider]");
+    if (!slider) {
+      return;
+    }
+
+    var viewport = $(".hero-slider__viewport", slider);
+    var slides = $all(".hero-slider__slide", slider);
+    if (slides.length < 2) {
+      return;
+    }
+
+    var current = 0;
+    var intervalMs = 5000;
+    var timer = null;
+    var touchStartX = 0;
+    var touchDeltaX = 0;
+
+    function goTo(index) {
+      current = (index + slides.length) % slides.length;
+
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle("is-active", i === current);
+      });
+    }
+
+    function next() {
+      goTo(current + 1);
+    }
+
+    function prev() {
+      goTo(current - 1);
+    }
+
+    function startAuto() {
+      if (timer) {
+        clearInterval(timer);
+      }
+
+      timer = setInterval(next, intervalMs);
+    }
+
+    function stopAuto() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    if (viewport) {
+      viewport.addEventListener(
+        "touchstart",
+        function (event) {
+          if (!event.touches.length) {
+            return;
+          }
+
+          touchStartX = event.touches[0].clientX;
+          touchDeltaX = 0;
+          stopAuto();
+        },
+        { passive: true }
+      );
+
+      viewport.addEventListener(
+        "touchmove",
+        function (event) {
+          if (!event.touches.length) {
+            return;
+          }
+
+          touchDeltaX = event.touches[0].clientX - touchStartX;
+        },
+        { passive: true }
+      );
+
+      viewport.addEventListener(
+        "touchend",
+        function () {
+          if (Math.abs(touchDeltaX) > 40) {
+            if (touchDeltaX < 0) {
+              next();
+            } else {
+              prev();
+            }
+          }
+
+          startAuto();
+        },
+        { passive: true }
+      );
+    }
+
+    goTo(0);
+    startAuto();
+  }
 
   var menuToggle = $("[data-menu-toggle]");
   var mobileNav = $("[data-mobile-nav]");
