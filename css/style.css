@@ -361,8 +361,8 @@ textarea {
 .hero {
   position: relative;
   overflow: hidden;
-  padding-top: calc(var(--header-h) + 32px);
-  padding-bottom: 56px;
+  padding-top: calc(var(--header-h) + 28px);
+  padding-bottom: 60px;
   background: #f5f8ff;
   color: var(--text);
 }
@@ -568,14 +568,14 @@ textarea {
 
 .hero-slider {
   width: 100%;
-  max-width: 520px;
-  justify-self: center;
+  max-width: none;
+  justify-self: stretch;
 }
 
 .hero-slider__viewport {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 12.5;
   border-radius: 24px;
   overflow: hidden;
   background: #ffffff;
@@ -600,7 +600,7 @@ textarea {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   border-radius: 24px;
 }
@@ -2202,9 +2202,9 @@ textarea {
   }
 
   .hero__grid {
-    grid-template-columns: minmax(0, 1.05fr) minmax(340px, 38%);
+    grid-template-columns: minmax(0, 44fr) minmax(0, 56fr);
     align-items: center;
-    gap: 24px;
+    gap: 28px;
   }
 
   .hero__content {
@@ -2303,13 +2303,13 @@ textarea {
 
 @media (min-width: 1024px) {
   .hero__grid {
-    grid-template-columns: minmax(0, 1.05fr) min(460px, 42%);
+    grid-template-columns: minmax(0, 43fr) minmax(0, 57fr);
     align-items: center;
     gap: 32px;
   }
 
-  .hero-slider {
-    max-width: 500px;
+  .hero-slider__viewport {
+    aspect-ratio: 16 / 12.8;
   }
 
   .consult-form--hero {
@@ -2341,13 +2341,13 @@ textarea {
   }
 
   .hero {
-    padding-top: calc(var(--header-h) + 20px);
-    padding-bottom: 36px;
+    padding-top: calc(var(--header-h) + 16px);
+    padding-bottom: 32px;
   }
 
   .hero__grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 20px;
   }
 
   .hero__title-line {
@@ -2373,13 +2373,20 @@ textarea {
   }
 
   .hero-slider {
+    width: calc(100% + 32px);
     max-width: none;
     justify-self: stretch;
-    margin-top: 4px;
+    margin-inline: -16px;
+    margin-top: 8px;
   }
 
   .hero-slider__viewport {
-    aspect-ratio: 16 / 11;
+    aspect-ratio: 16 / 12;
+    border-radius: 20px;
+  }
+
+  .hero-slider__slide img {
+    border-radius: 20px;
   }
 
   .consult-form {
