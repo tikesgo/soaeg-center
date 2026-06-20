@@ -45,13 +45,15 @@
 
 | 파일 | 역할 |
 |------|------|
-| `index.html` | 메인 랜딩 (Hero, 연락처 모달, 신뢰바) |
+| `index.html` | 메인 랜딩 (Hero, 채널톡 CTA) |
 | `css/style.css` | 전체 스타일 |
 | `js/contact-config.js` | **★ 전화·카카오·텔레그램 연락처 — 실제값 입력 위치** |
 | `js/site-config.js` | 사이트 URL 상수 (`SOAEG_SITE.url`) |
 | `SITE_URL.txt` | 배포 URL 메모 (HTML/robots/sitemap과 동기화) |
 | `images/og-preview.png` | OG 공유 미리보기 이미지 (1200×630) |
-| `js/main.js` | 모달, 네비, 연락처 바인딩 |
+| `images/hero-slide-1.png` | Hero 슬라이드 1 (현재 1536×1024, 교체 예정) |
+| `images/hero-slide-2.png` | Hero 슬라이드 2 (현재 1536×1024, 교체 예정) |
+| `js/main.js` | 채널톡, 네비, Hero 슬라이더 |
 | `robots.txt` / `sitemap.xml` | SEO 크롤링 설정 |
 
 ## 배포
@@ -73,4 +75,20 @@
 
 - 개인정보 입력 폼·DB 연동·외부 API 저장 로직을 **추가하지 않습니다**.
 - 채널 ID가 `준비중`이면 모달에서 카카오/텔레그램 버튼이 비활성화됩니다.
-- 서브페이지 CTA는 메인(`index.html#open-contact`)으로 이동해 모달을 엽니다.
+- 서브페이지 CTA는 메인(`index.html#open-contact`)으로 이동해 채널톡을 엽니다.
+
+## Hero 슬라이드 이미지 (교체 가이드)
+
+Hero 우측 슬라이더(`images/hero-slide-1.png`, `hero-slide-2.png`) 교체 시 아래 규격을 따릅니다.
+
+| 항목 | 값 |
+|------|-----|
+| **권장 제작 크기** | **1600 × 1280 px** |
+| **비율** | **5 : 4** (슬라이더 CSS `aspect-ratio: 16 / 12.8`과 동일) |
+| **Retina** | 2x 기준 1600×1280 권장 (PC·모바일 공통) |
+| **형식** | PNG 또는 WebP |
+| **세이프존** | 핵심 텍스트·로고는 가장자리 80px 안쪽, 하단 60px는 dot과 겹칠 수 있음 |
+| **스타일** | 밝은 배경(#F5F8FF~#FFF), 메인 블루(#2B63D9), Hero 전용 풀블리드 |
+| **주의** | 3:2·16:9 비율 사용 금지, 업스케일 금지 |
+
+현재 파일은 AI 생성 1536×1024(3:2)이며, 슬라이더 5:4와 비율 불일치로 letterbox가 발생합니다. 교체 시 5:4로 제작하면 선명도가 개선됩니다.
