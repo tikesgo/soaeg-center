@@ -95,7 +95,7 @@
     }
 
     var current = 0;
-    var intervalMs = 4500;
+    var intervalMs = 2000;
     var timer = null;
 
     function goTo(index) {
