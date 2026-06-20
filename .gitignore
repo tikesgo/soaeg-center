@@ -9,6 +9,8 @@ Desktop.ini
 
 # Local tooling
 .vercel/
+node_modules/
+package-lock.json
 
 # Logs
 *.log
