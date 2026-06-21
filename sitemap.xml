@@ -19,11 +19,23 @@
   </url>
   <url>
     <loc>https://소액센터.kr/policy/why-small-payment-policy/</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-21</lastmod>
   </url>
   <url>
     <loc>https://REPLACE-VERCEL-URL.vercel.app/limit/</loc>
     <lastmod>2026-06-06</lastmod>
+  </url>
+  <url>
+    <loc>https://소액센터.kr/limit/mobile-small-payment-limit-guide/</loc>
+    <lastmod>2026-06-21</lastmod>
+  </url>
+  <url>
+    <loc>https://소액센터.kr/overdue/</loc>
+    <lastmod>2026-06-21</lastmod>
+  </url>
+  <url>
+    <loc>https://소액센터.kr/overdue/mobile-payment-overdue-guide/</loc>
+    <lastmod>2026-06-21</lastmod>
   </url>
   <url>
     <loc>https://REPLACE-VERCEL-URL.vercel.app/guide/</loc>
@@ -32,6 +44,14 @@
   <url>
     <loc>https://REPLACE-VERCEL-URL.vercel.app/guide/mobile-payment-cashout-method/</loc>
     <lastmod>2026-06-06</lastmod>
+  </url>
+  <url>
+    <loc>https://소액센터.kr/guide/how-to-use-mobile-small-payment/</loc>
+    <lastmod>2026-06-21</lastmod>
+  </url>
+  <url>
+    <loc>https://소액센터.kr/guide/why-mobile-small-payment-not-working/</loc>
+    <lastmod>2026-06-21</lastmod>
   </url>
   <url>
     <loc>https://REPLACE-VERCEL-URL.vercel.app/privacy/</loc>
