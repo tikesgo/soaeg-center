@@ -13,7 +13,7 @@
  */
 window.SOAEG_SITE = {
   // TODO: Vercel 무료 도메인 배포 후 실제 주소로 교체
-  url: "https://REPLACE-VERCEL-URL.vercel.app",
-  // TODO: 커스텀 도메인 연결 후 canonical/og/sitemap을 이 URL로 전환
+  url: "https://soaeg-center.vercel.app",
+  // 커스텀 도메인 연결 시 canonical/og/sitemap을 productionUrl로 전환
   productionUrl: "https://소액센터.kr",
 };
