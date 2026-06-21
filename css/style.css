@@ -2077,67 +2077,14 @@ textarea {
   text-decoration: underline;
 }
 
-.article-related__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 160px;
-}
-
-.article-cta {
-  margin-top: 32px;
-  padding: 28px 24px;
-  border-radius: var(--radius);
-  background: linear-gradient(160deg, var(--primary-dark), var(--primary));
-  color: var(--white);
-  text-align: center;
-}
-
-.article-cta h2 {
-  margin: 0 0 10px;
-  font-size: 1.2rem;
-  font-weight: 900;
-  color: var(--white);
-}
-
-.article-cta p {
-  margin: 0 0 20px;
-  font-size: 0.9rem;
-  opacity: 0.92;
-  font-weight: 600;
-  line-height: 1.65;
-  color: var(--white);
-}
-
-.article-cta__actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
 @media (max-width: 767px) {
   .related-links li {
     flex-direction: column;
     gap: 6px;
   }
 
-  .article-cta {
-    padding: 22px 18px;
-  }
-
-  .article-cta__actions .btn {
-    width: 100%;
-    max-width: 280px;
-  }
-
   .article-related {
     padding: 20px 18px;
-  }
-
-  .article-related__cta {
-    width: 100%;
-    max-width: 280px;
   }
 
   .legal-section {
