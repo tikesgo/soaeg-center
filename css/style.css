@@ -2031,6 +2031,59 @@ textarea {
   white-space: nowrap;
 }
 
+.article-related {
+  margin-top: 32px;
+  padding: 24px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.article-related h2 {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.article-related__links {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.article-related__links li {
+  padding: 11px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.article-related__links li:first-child {
+  padding-top: 0;
+}
+
+.article-related__links li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.article-related__links a {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.5;
+}
+
+.article-related__links a:hover {
+  text-decoration: underline;
+}
+
+.article-related__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+}
+
 .article-cta {
   margin-top: 32px;
   padding: 28px 24px;
@@ -2074,6 +2127,15 @@ textarea {
   }
 
   .article-cta__actions .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .article-related {
+    padding: 20px 18px;
+  }
+
+  .article-related__cta {
     width: 100%;
     max-width: 280px;
   }
