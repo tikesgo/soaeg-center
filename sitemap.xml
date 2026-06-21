@@ -2,63 +2,63 @@
 <!-- TODO: Vercel 배포 후 SITE_URL.txt / js/site-config.js 와 동일한 URL로 교체 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://soaeg-center.vercel.app/</loc>
+    <loc>https://소액센터.com/</loc>
     <lastmod>2026-06-06</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/faq/</loc>
+    <loc>https://소액센터.com/faq/</loc>
     <lastmod>2026-06-06</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/policy/</loc>
+    <loc>https://소액센터.com/policy/</loc>
     <lastmod>2026-06-06</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/policy/small-payment-policy/</loc>
+    <loc>https://소액센터.com/policy/small-payment-policy/</loc>
     <lastmod>2026-06-06</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/policy/why-small-payment-policy/</loc>
+    <loc>https://소액센터.com/policy/why-small-payment-policy/</loc>
     <lastmod>2026-06-21</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/limit/</loc>
+    <loc>https://소액센터.com/limit/</loc>
     <lastmod>2026-06-06</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/limit/mobile-small-payment-limit-guide/</loc>
+    <loc>https://소액센터.com/limit/mobile-small-payment-limit-guide/</loc>
     <lastmod>2026-06-21</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/overdue/</loc>
+    <loc>https://소액센터.com/overdue/</loc>
     <lastmod>2026-06-21</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/overdue/mobile-payment-overdue-guide/</loc>
+    <loc>https://소액센터.com/overdue/mobile-payment-overdue-guide/</loc>
     <lastmod>2026-06-21</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/guide/</loc>
+    <loc>https://소액센터.com/guide/</loc>
     <lastmod>2026-06-06</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/guide/mobile-payment-cashout-method/</loc>
+    <loc>https://소액센터.com/guide/mobile-payment-cashout-method/</loc>
     <lastmod>2026-06-06</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/guide/how-to-use-mobile-small-payment/</loc>
+    <loc>https://소액센터.com/guide/how-to-use-mobile-small-payment/</loc>
     <lastmod>2026-06-21</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/guide/why-mobile-small-payment-not-working/</loc>
+    <loc>https://소액센터.com/guide/why-mobile-small-payment-not-working/</loc>
     <lastmod>2026-06-21</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/privacy/</loc>
+    <loc>https://소액센터.com/privacy/</loc>
     <lastmod>2026-06-06</lastmod>
   </url>
   <url>
-    <loc>https://soaeg-center.vercel.app/terms/</loc>
+    <loc>https://소액센터.com/terms/</loc>
     <lastmod>2026-06-06</lastmod>
   </url>
 </urlset>
