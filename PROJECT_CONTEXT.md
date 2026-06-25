@@ -20,7 +20,7 @@
 
 ## 사이트 URL (SEO)
 
-배포 단계에 따라 아래 파일의 URL을 **동일한 값**으로 맞춥니다.
+배포 단계에 따라 아래 파일의 URL을 **동일한 값**으로 맞춥니다. 현재 프로덕션 도메인은 `https://소액센터.com` (punycode: `xn--zj4btf12is4p.com`) 입니다.
 
 | 파일 | 용도 |
 |------|------|
@@ -30,10 +30,7 @@
 | `robots.txt` | `Sitemap:` URL |
 | `sitemap.xml` | 모든 `<loc>` URL |
 
-1. **Vercel 무료 도메인** — `https://REPLACE-VERCEL-URL.vercel.app` → 배포 후 실제 `*.vercel.app` 주소로 교체
-2. **커스텀 도메인** (`소액센터.kr`) — `site-config.js`의 `productionUrl` 기준으로 전환
-
-각 HTML `<head>`에 `<!-- TODO: SEO URL은 SITE_URL.txt / js/site-config.js 와 동기화 -->` 주석이 있습니다.
+1. **커스텀 도메인** — `https://소액센터.com` (`SITE_URL.txt`, `js/site-config.js`의 `productionUrl` 기준)
 
 ## 연락처 설정
 
@@ -60,16 +57,16 @@
 
 - Vercel 등 정적 호스팅에 그대로 배포 가능합니다.
 - 빌드 단계 없음. 프로젝트 루트를 문서 루트로 지정하면 됩니다.
-- 배포 직후 `SITE_URL.txt`의 placeholder를 실제 Vercel URL로 교체하고, 위 SEO 파일들을 일괄 동기화합니다.
+- URL 변경 시 `SITE_URL.txt`를 먼저 수정한 뒤 `site-config.js`, HTML `<head>`, `robots.txt`, `sitemap.xml`을 동일 값으로 맞춥니다.
 
 ### 배포 전 체크리스트
 
 - [ ] `js/contact-config.js` — 실제 전화번호·카카오·텔레그램 ID 입력
-- [ ] Vercel 배포 후 `REPLACE-VERCEL-URL.vercel.app` → 실제 URL로 교체 (`SITE_URL.txt`, `site-config.js`, HTML head, `robots.txt`, `sitemap.xml`)
+- [x] 프로덕션 URL `https://소액센터.com` — `SITE_URL.txt`, `site-config.js`, HTML head, `robots.txt`, `sitemap.xml` 동기화 완료
 - [ ] `images/og-preview.png` 존재 확인 (OG 미리보기)
 - [ ] 메인·서브페이지 CTA → `index.html#open-contact` 모달 동작 확인
 - [ ] privacy / FAQ / guide 문구가 연락처 안내 모달 방식과 일치하는지 확인
-- [ ] (선택) 커스텀 도메인 연결 후 `productionUrl` 기준으로 canonical·sitemap 재전환
+- [ ] (선택) 도메인 변경 시 `productionUrl` 기준으로 canonical·sitemap 재동기화
 
 ## 주의사항
 
