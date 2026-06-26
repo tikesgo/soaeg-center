@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="7jeNLE5OhxnZj5yNvkPYuDVYKkrUDWDGIqPdo5Pvrkg" />
+    <title>소액결제 본인인증 실패 원인 총정리 | 소액센터</title>
+    <meta name="description" content="소액결제 본인인증 실패 원인, 명의 불일치·신규 개통·번호이동·차단 영향, 통신사별 확인·해결 방법을 정리합니다." />
+    <meta name="keywords" content="소액결제 본인인증 실패, 본인인증 오류, 휴대폰 결제 인증 실패, 소액결제 인증 안됨, 명의 불일치" />
+    <link rel="canonical" href="https://소액센터.com/guide/mobile-payment-authentication-failure-causes/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://소액센터.com/guide/mobile-payment-authentication-failure-causes/" />
+    <meta property="og:title" content="소액결제 본인인증 실패 원인 총정리 | 소액센터" />
+    <meta property="og:description" content="소액결제 본인인증 실패 원인, 명의 불일치·신규 개통·번호이동·차단 영향, 통신사별 확인·해결 방법을 정리합니다." />
+    <meta property="og:image" content="https://소액센터.com/images/og-preview.png" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "본인인증 실패와 결제 실패는 다른가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "인증은 명의 확인, 결제는 승인 단계입니다. 인증 후에도 승인에서 실패할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "명의가 다른데 인증이 될 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "회선 명의자 본인만 인증할 수 있습니다. 가족·타인 명의는 제한될 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "번호이동 후 인증이 안 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "정보 동기화 지연으로 일시 실패할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "차단이 있으면 인증도 안 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "차단·정책이 승인 단계에서 오류로 보일 수 있습니다. 앱에서 통합 확인하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "비밀번호를 잊으면 어떻게 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "통신사 앱·고객센터에서 재설정 절차를 안내받을 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "통신사 앱에서 인증 설정을 볼 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "T world, 마이케이티, 유플러스 앱에서 관련 메뉴를 확인하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "인증은 됐는데 결제만 안 되면?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "한도·정책·미납 등 승인 단계 원인을 점검하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "고객센터에 뭘 알려줘야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "오류 메시지, 개통·이동일, 명의 관계, 앱 조회 결과를 준비하세요."
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-logo" href="../../index.html" aria-label="소액센터 홈">
+          <strong>소액센터</strong>
+          <span>휴대폰 소액결제 현금화</span>
+        </a>
+        <nav class="site-nav" aria-label="주요 메뉴">
+          <a href="../../index.html#services">서비스 소개</a>
+          <a href="../">이용 방법</a>
+          <a href="../../policy/">정책 및 해결방법</a>
+          <a href="../../limit/">한도 확인</a>
+          <a href="../../index.html#reviews">상담 사례</a>
+          <a href="../../faq/">FAQ</a>
+          <a href="../../index.html#footer-contact">고객센터</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn--accent" href="../../index.html#open-contact">실시간 상담</a>
+          <a class="btn btn--primary btn--consult-short" href="../../index.html#open-contact">빠른 상담신청</a>
+          <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobileNav" aria-label="메뉴 열기">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="article-page">
+      <section class="page-hero">
+        <div class="container">
+          <p class="article-hero__eyebrow">이용 방법 허브</p>
+          <h1>소액결제 본인인증 실패 원인 총정리</h1>
+          <p>본인인증 단계에서 막히면 결제까지 진행되지 않습니다. 흔한 인증 실패 원인과 통신사별 확인 방법을 정리했습니다.</p>
+        </div>
+      </section>
+
+      <section class="page-content">
+        <div class="container">
+          <article class="content-card article-body">
+            <h2>소액결제 본인인증 실패란</h2>
+            <p>
+              본인인증은 휴대폰 소액결제 전 명의자 확인 절차입니다. 인증에 실패하면 결제 창이 진행되지 않거나, 인증 후에도 승인 단계에서 별도 오류가 날 수 있습니다.
+            </p>
+            <p>
+              인증 실패와 결제 승인 거절은 다릅니다. 인증은 통과했지만 한도·정책으로 결제가 실패하는 경우도 많습니다.
+            </p>
+            <p>
+              <a href="../why-mobile-small-payment-not-working/">소액결제가 안되는 이유</a>에서 전체 점검 순서를 확인하세요.
+            </p>
+            <h2>명의·정보 불일치</h2>
+            <p>
+              회선 명의자와 인증 정보(이름·생년월일·결제 비밀번호)가 일치하지 않으면 인증이 실패합니다.
+            </p>
+            <p>
+              가족·법인 명의 회선은 본인 명의 인증이 불가할 수 있습니다. 명의자 본인이 인증해야 합니다.
+            </p>
+            <p>
+              최근 명의 변경·번호이동 직후에는 DB 반영 지연으로 일시 실패할 수 있습니다.
+            </p>
+            <h2>신규 개통·번호이동 영향</h2>
+            <p>
+              개통·번호이동 직후 인증 정보 동기화에 시간이 걸릴 수 있습니다.
+            </p>
+            <p>
+              <a href="../when-mobile-payment-available-after-activation/">신규개통 후 소액결제</a>와 <a href="../number-porting-mobile-payment-not-working/">번호이동 후 소액결제</a> 가이드를 참고하세요.
+            </p>
+            <p>
+              며칠 후 재시도하거나 통신사 앱·고객센터에서 인증 상태를 확인하세요.
+            </p>
+            <h2>차단·정책·미납과 인증</h2>
+            <p>
+              일부 경우 차단·정책·미납이 인증 단계가 아닌 결제 승인 단계에서 오류로 표시됩니다.
+            </p>
+            <p>
+              <a href="../../policy/mobile-payment-block-release/">소액결제 차단 해제</a>, <a href="../../policy/how-to-check-mobile-payment-policy/">정책 확인</a>, <a href="../../overdue/mobile-payment-overdue-guide/">미납 안내</a>를 함께 점검하세요.
+            </p>
+            <p>
+              인증 오류 메시지와 실제 원인이 다를 수 있으므로 앱에서 통합 상태를 확인하세요.
+            </p>
+            <h2>통신사별 본인인증 오류 해결</h2>
+            <p>
+              SKT·KT·LGU+ 각각 인증 방식·앱 메뉴가 다릅니다.
+            </p>
+            <p>
+              <a href="../skt-mobile-payment-authentication-error/">SKT</a>, <a href="../kt-mobile-payment-authentication-error/">KT</a>, <a href="../lgu-mobile-payment-authentication-error/">LGU+</a> 본인인증 오류 가이드에서 통신사별 해결 절차를 확인하세요.
+            </p>
+            <p>
+              T world, 마이케이티, 유플러스 앱에서 본인인증·소액결제 설정을 점검할 수 있습니다.
+            </p>
+            <h2>결제 비밀번호·인증 수단 오류</h2>
+            <p>
+              소액결제 비밀번호 오류, SMS 인증 시간 초과, 앱 인증서 만료 등으로 실패할 수 있습니다.
+            </p>
+            <p>
+              비밀번호 재설정·인증 수단 변경은 통신사 앱·고객센터에서 안내받을 수 있습니다.
+            </p>
+            <p>
+              동일 오류 반복 시 <a href="../mobile-payment-error-code-guide/">결제 오류코드</a> 안내와 함께 점검하세요.
+            </p>
+            <h2>본인인증 실패 시 확인 순서</h2>
+            <p>
+              ① 명의·인증 정보 일치 확인 → ② 개통·번호이동 직후 여부 → ③ 차단·정책·미납 확인 → ④ 통신사 앱·고객센터 문의 → ⑤ 통신사별 인증 오류 가이드 참고
+            </p>
+            <p>
+              인증 성공 후 결제 실패 시 한도·정책을 추가로 점검하세요.
+            </p>
+            <p>
+              추가 질문은 <a href="../../faq/">FAQ</a>에서 확인할 수 있습니다.
+            </p>
+
+            <h2>가족·법인 명의 회선</h2>
+            <p>
+              가족 결합·법인 명의 회선은 명의자 본인만 인증·결제할 수 있는 경우가 많습니다. 실제 이용자와 명의자가 다르면 인증이 실패할 수 있습니다.
+            </p>
+            <p>
+              명의 변경·승계 절차 진행 중에도 일시적으로 인증·결제가 제한될 수 있습니다. 변경 완료 후 재시도하세요.
+            </p>
+            <h2>SMS·앱 인증 시간 초과</h2>
+            <p>
+              SMS 인증번호 입력 시간이 지나거나, 앱 푸시 인증을 놓치면 실패할 수 있습니다. 인증 요청을 다시 시도하세요.
+            </p>
+            <p>
+              해외 로밍·수신 차단 앱이 설치된 경우 인증 문자가 오지 않을 수 있습니다. 수신 설정을 확인하세요.
+            </p>
+            <p>
+              실제 이용 가능 여부와 해제 시점은 통신사·요금제·납부 이력·정책 사유에 따라 달라질 수 있습니다. 앱 조회 결과를 기준으로 다음 조치를 결정하고, 동일 문제가 반복되면 고객센터에 통합 상태 확인을 요청하세요. 소액결제는 통신 요금과 함께 청구되므로 요금 납부 습관이 이용 연속성에 큰 영향을 줍니다.
+            </p>
+            <h2>결제 비밀번호·잠금 상태</h2>
+            <p>
+              소액결제 비밀번호를 여러 번 틀리면 일시 잠금될 수 있습니다. 잠금 해제는 통신사 앱·고객센터 안내에 따르세요.
+            </p>
+            <p>
+              최근 비밀번호를 변경했다면 가맹점·앱에 저장된 이전 정보와 충돌할 수 있으니 캐시 삭제 후 재시도하세요.
+            </p>
+            <h2>본인인증 실패 종합 정리</h2>
+            <p>
+              소액결제 본인인증은 회선 명의자 확인 절차입니다. 명의·생년월일·결제 비밀번호 불일치, 신규 개통·번호이동 직후 DB 반영 지연, SMS 인증 시간 초과, 가족·법인 명의 제한 등이 대표 원인입니다. 인증에 성공해도 한도·정책·미납으로 결제 승인이 거절될 수 있으므로, 인증 오류와 결제 오류를 구분해 점검하세요. SKT·KT·LGU+ 본인인증 오류 가이드에서 통신사별 해결 절차를 확인하고, 반복 실패 시 통신사 앱·고객센터에 인증 상태 통합 확인을 요청할 수 있습니다.
+            </p>
+            <p>
+              통신사·요금제·가입 유형·납부 이력·정책 사유에 따라 안내 내용이 달라질 수 있습니다. 앱 조회와 고객센터 상담을 병행하면 원인 파악이 빨라지며, 미납·정책·한도·차단·본인인증을 순서대로 점검하는 것이 재시도 전 기본 절차입니다. 동일 증상이 반복되면 오류 문구·시각·앱 스크린샷을 준비해 상담에 활용하세요. 소액결제는 통신 요금 청구와 연동되므로 요금 납부 관리가 이용 연속성에 직접적인 영향을 줍니다.
+            </p>
+            <p>
+              통신사·요금제·가입 유형·납부 이력·정책 사유에 따라 안내 내용이 달라질 수 있습니다. 앱 조회와 고객센터 상담을 병행하면 원인 파악이 빨라지며, 미납·정책·한도·차단·본인인증을 순서대로 점검하는 것이 재시도 전 기본 절차입니다.
+            </p>
+            <p>
+              동일 증상이 반복되면 오류 문구·시각·앱 스크린샷을 준비해 상담에 활용하세요. 소액결제는 통신 요금 청구와 연동되므로 요금 납부 관리가 이용 연속성에 직접적인 영향을 줍니다. 통신사 공식 앱·고객센터 안내를 최종 기준으로 확인하세요.
+            </p>
+            <p>
+              가맹점·앱·게임 서비스 측 제한이 있는 경우 통신사 상태가 정상이어도 결제가 실패할 수 있습니다. 다른 서비스에서 소액 결제를 시도해 보거나, 해당 서비스 고객센터에 문의하는 것도 원인 구분에 도움이 됩니다.
+            </p>
+            <p>
+              통신사·요금제·가입 유형·납부 이력·정책 사유에 따라 안내 내용이 달라질 수 있습니다. 앱 조회와 고객센터 상담을 병행하면 원인 파악이 빨라지며, 미납·정책·한도·차단·본인인증을 순서대로 점검하는 것이 재시도 전 기본 절차입니다.
+            </p>
+            <p>
+              동일 증상이 반복되면 오류 문구·시각·앱 스크린샷을 준비해 상담에 활용하세요. 소액결제는 통신 요금 청구와 연동되므로 요금 납부 관리가 이용 연속성에 직접적인 영향을 줍니다. 통신사 공식 앱·고객센터 안내를 최종 기준으로 확인하세요.
+            </p>
+            <h2 id="faq">자주 묻는 질문</h2>
+            <p>자주 문의되는 내용을 정리했습니다.</p>
+            <h3>본인인증 실패와 결제 실패는 다른가요?</h3>
+            <p>인증은 명의 확인, 결제는 승인 단계입니다. 인증 후에도 승인에서 실패할 수 있습니다.</p>
+            <h3>명의가 다른데 인증이 될 수 있나요?</h3>
+            <p>회선 명의자 본인만 인증할 수 있습니다. 가족·타인 명의는 제한될 수 있습니다.</p>
+            <h3>번호이동 후 인증이 안 되나요?</h3>
+            <p>정보 동기화 지연으로 일시 실패할 수 있습니다.</p>
+            <h3>차단이 있으면 인증도 안 되나요?</h3>
+            <p>차단·정책이 승인 단계에서 오류로 보일 수 있습니다. 앱에서 통합 확인하세요.</p>
+            <h3>비밀번호를 잊으면 어떻게 하나요?</h3>
+            <p>통신사 앱·고객센터에서 재설정 절차를 안내받을 수 있습니다.</p>
+            <h3>통신사 앱에서 인증 설정을 볼 수 있나요?</h3>
+            <p>T world, 마이케이티, 유플러스 앱에서 관련 메뉴를 확인하세요.</p>
+            <h3>인증은 됐는데 결제만 안 되면?</h3>
+            <p>한도·정책·미납 등 승인 단계 원인을 점검하세요.</p>
+            <h3>고객센터에 뭘 알려줘야 하나요?</h3>
+            <p>오류 메시지, 개통·이동일, 명의 관계, 앱 조회 결과를 준비하세요.</p>
+
+            <aside class="article-related" aria-labelledby="articleRelatedTitle">
+              <h2 id="articleRelatedTitle">관련 안내</h2>
+              <ul class="article-related__links">
+                <li><a href="../../guide/why-mobile-small-payment-not-working/">소액결제가 안되는 이유</a></li>
+                <li><a href="../../policy/why-small-payment-policy/">소액결제 정책이 걸리는 이유</a></li>
+                <li><a href="../../policy/mobile-payment-policy-unlock-guide/">소액결제 정책 해제 방법</a></li>
+                <li><a href="../../policy/mobile-payment-block-release/">소액결제 차단 해제 방법</a></li>
+                <li><a href="../../limit/mobile-small-payment-limit-guide/">소액결제 한도 총정리</a></li>
+                <li><a href="../../faq/">FAQ</a></li>
+              </ul>
+            </aside>
+
+            <a class="back-link" href="../">← 목록으로 돌아가기</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer-contact">
+      <div class="container site-footer__inner">
+        <div class="footer-brand">
+          <strong>소액센터</strong>
+          <p>휴대폰 소액결제 상담 서비스</p>
+        </div>
+        <nav class="footer-nav" aria-label="푸터 메뉴">
+          <a href="../../faq/">FAQ</a>
+          <a href="../../guide/">이용방법</a>
+          <a href="../../policy/">정책 안내</a>
+          <a href="../../privacy/">개인정보처리방침</a>
+        </nav>
+        <div class="footer-bottom">
+          <span>© 2024 소액센터. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../js/main.js" defer></script>
+  </body>
+</html>
