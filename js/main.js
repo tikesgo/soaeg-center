@@ -256,4 +256,78 @@
   if (window.location.hash === "#open-contact") {
     openConsultation();
   }
+
+  initSiteNavActive();
+
+  function normalizePath(pathname) {
+    var path = String(pathname || "/");
+    if (/index\.html$/i.test(path)) {
+      path = path.replace(/index\.html$/i, "/");
+    }
+    if (path.length > 1 && path.charAt(path.length - 1) === "/") {
+      path = path.slice(0, -1);
+    }
+    return path || "/";
+  }
+
+  function pathToSection(pathname) {
+    var path = normalizePath(pathname);
+    if (path === "/") {
+      return null;
+    }
+
+    var root = "/" + path.split("/").filter(Boolean)[0];
+    var sections = {
+      "/guide": "guide",
+      "/policy": "policy",
+      "/limit": "limit",
+      "/cases": "cases",
+      "/faq": "faq",
+    };
+
+    return sections[root] || null;
+  }
+
+  function getLinkSection(anchor) {
+    var href = anchor.getAttribute("href") || "";
+    if (!href || href.charAt(0) === "#") {
+      return null;
+    }
+
+    if (href.indexOf("#services") !== -1) {
+      return null;
+    }
+
+    if (href.indexOf("#footer-contact") !== -1 || href.indexOf("#open-contact") !== -1) {
+      return null;
+    }
+
+    try {
+      var url = new URL(href, window.location.href);
+      var path = normalizePath(url.pathname);
+
+      if (path === "/") {
+        return url.hash === "#reviews" ? "cases" : null;
+      }
+
+      return pathToSection(path);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function initSiteNavActive() {
+    var currentSection = pathToSection(window.location.pathname);
+    var navs = $all(".site-nav, [data-mobile-nav]");
+
+    navs.forEach(function (nav) {
+      $all("a", nav).forEach(function (link) {
+        link.removeAttribute("aria-current");
+
+        if (currentSection && getLinkSection(link) === currentSection) {
+          link.setAttribute("aria-current", "page");
+        }
+      });
+    });
+  }
 })();
