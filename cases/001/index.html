@@ -131,30 +131,34 @@
       </div>
     </header>
 
-    <main class="article-page">
+    <main class="article-page case-detail-page">
       <section class="page-hero">
         <div class="container">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li><a href="../../index.html">홈</a></li>
-              <li><a href="../index.html">실제 상담 사례</a></li>
-              <li><span aria-current="page">#001</span></li>
-            </ol>
-          </nav>
-          <p class="article-hero__eyebrow">실제 상담 사례</p>
-          <h1>실제 상담 사례 #001</h1>
-          <p>번호이동 후 소액결제가 되지 않았던 사례 — 개인정보는 익명 처리했습니다.</p>
+          <h1>번호이동 후 소액결제가 제한된 실제 상담 사례</h1>
+          <p>번호이동 직후 소액결제가 되지 않아 문의주신 사례를 개인정보 없이 정리했습니다.</p>
         </div>
       </section>
 
       <section class="page-content">
         <div class="container">
           <article class="content-card article-body" data-case-id="001">
-            <div class="case-detail__meta-bar">
-              <span><strong>상담유형</strong> 번호이동</span>
-              <span><strong>통신사</strong> KT</span>
-              <span><strong>작성일</strong> <time datetime="2026-07-01">2026-07-01</time></span>
-              <span aria-label="별점 5점 만점에 5점">★★★★★</span>
+            <div class="case-detail__meta-grid" aria-label="상담 사례 요약 정보">
+              <div class="case-detail__meta-card">
+                <span class="case-detail__meta-label">상담유형</span>
+                <span class="case-detail__meta-value">번호이동</span>
+              </div>
+              <div class="case-detail__meta-card">
+                <span class="case-detail__meta-label">통신사</span>
+                <span class="case-detail__meta-value">KT</span>
+              </div>
+              <div class="case-detail__meta-card">
+                <span class="case-detail__meta-label">작성일</span>
+                <time class="case-detail__meta-value" datetime="2026-07-01">2026-07-01</time>
+              </div>
+              <div class="case-detail__meta-card">
+                <span class="case-detail__meta-label">만족도</span>
+                <span class="case-detail__meta-stars" aria-label="별점 5점 만점에 5점">★★★★★</span>
+              </div>
             </div>
 
             <section class="case-detail__section" id="situation">
