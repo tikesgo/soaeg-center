@@ -2163,6 +2163,65 @@ textarea {
   color: var(--text);
 }
 
+.cases-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cases-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.2;
+  backdrop-filter: blur(4px);
+}
+
+.cases-hero-badge__icon {
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.cases-hero-badge__label {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.cases-hero-badge__count {
+  font-weight: 800;
+  color: #fff;
+}
+
+.cases-hero-badge__suffix {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.cases-hero-badge--static .cases-hero-badge__label {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@media (max-width: 639px) {
+  .cases-hero-badges {
+    gap: 6px;
+    margin-top: 16px;
+  }
+
+  .cases-hero-badge {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+}
+
 .cases-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
