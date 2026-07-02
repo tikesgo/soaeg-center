@@ -43,6 +43,12 @@
               "position": 1,
               "url": "https://소액센터.com/cases/001/",
               "name": "실제 상담 사례 #001 — 번호이동 후 소액결제가 되지 않았던 사례"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://소액센터.com/cases/002/",
+              "name": "실제 상담 사례 #002 — KT 소액결제가 될지 걱정되셨던 30대 여성 고객 상담 사례"
             }
           ]
         }
@@ -130,10 +136,9 @@
           </p>
 
           <!--
-            카드 추가 가이드 (DB 연동 전):
-            - article.case-card 블록을 복사해 data-case-id="002" 등으로 식별
-            - js/cases-data.js CASES 배열에 동일 필드 추가
-            - 상세 페이지 cases/002/index.html 생성
+            사례 추가: cases/_template/list-card.html 복사
+            → js/cases-data.js CASES 배열 추가
+            → cases/{id}/index.html (cases/_template/detail.index.html 복사)
           -->
           <div class="cases-grid" data-cases-list>
             <article class="case-card" data-case-id="001">
@@ -159,6 +164,32 @@
               </dl>
               <div class="case-card__action">
                 <a class="btn btn--primary btn--block" href="001/">자세히 보기</a>
+              </div>
+            </article>
+            <article class="case-card" data-case-id="002">
+              <p class="case-card__label">실제 상담 사례 #002</p>
+              <p class="case-card__stars" aria-label="별점 5점 만점에 5점">★★★★★</p>
+              <h2 class="case-card__title">KT 소액결제가 될지 걱정되셨던 30대 여성 고객 상담 사례</h2>
+              <p class="case-card__summary">
+                최근 KT 소액결제 이슈를 보고 이용 가능 여부가 걱정되어 상담을 요청하셨으며, 정책·미납 확인 후 이용
+                가능 상태를 안내드렸습니다.
+              </p>
+              <dl class="case-card__meta">
+                <div>
+                  <dt>상담유형</dt>
+                  <dd>이용 가능 여부 문의</dd>
+                </div>
+                <div>
+                  <dt>통신사</dt>
+                  <dd>KT</dd>
+                </div>
+                <div>
+                  <dt>작성일</dt>
+                  <dd><time datetime="2026-07-02">2026-07-02</time></dd>
+                </div>
+              </dl>
+              <div class="case-card__action">
+                <a class="btn btn--primary btn--block" href="002/">자세히 보기</a>
               </div>
             </article>
           </div>
