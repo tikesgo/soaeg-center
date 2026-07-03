@@ -2222,6 +2222,44 @@ textarea {
   }
 }
 
+.user-guide-hub__pending {
+  margin: 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.user-guide-hub__steps .service-card .case-card__label {
+  margin: 0 0 10px;
+}
+
+.user-guide-hub__steps .service-card .case-card__action {
+  margin-top: auto;
+}
+
+.user-guide-hub .section-head--spaced {
+  margin-top: 48px;
+}
+
+.user-guide-hub .content-card--spaced {
+  margin-top: 40px;
+}
+
+.user-guide-hub .process-promo--spaced {
+  margin-top: 40px;
+}
+
+@media (min-width: 640px) {
+  .user-guide-hub__steps.card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .user-guide-hub__steps.card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .cases-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
