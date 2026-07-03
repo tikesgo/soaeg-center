@@ -2236,8 +2236,107 @@ textarea {
   margin-top: 40px;
 }
 
-.user-guide-hub .process-promo--spaced {
+.user-guide-hub .guide-consult-cta--spaced {
   margin-top: 40px;
+}
+
+/* User guide hub — minimal consult CTA */
+.guide-consult-cta {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 44px 48px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(15, 23, 36, 0.04);
+}
+
+.guide-consult-cta__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.guide-consult-cta__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.guide-consult-cta__body h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.guide-consult-cta__body p {
+  margin: 0 0 22px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.guide-consult-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: var(--radius-sm);
+  background: #1f2937;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.guide-consult-cta__btn:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.guide-consult-cta__btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (max-width: 639px) {
+  .guide-consult-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 28px 24px;
+  }
+
+  .guide-consult-cta__icon {
+    width: 64px;
+    height: 64px;
+    font-size: 1.75rem;
+  }
+
+  .guide-consult-cta__body h3 {
+    font-size: 1.1rem;
+  }
+
+  .guide-consult-cta__body p {
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+  }
+
+  .guide-consult-cta__btn {
+    width: 100%;
+  }
 }
 
 /* Hub — clickable menu cards (full-width list) */
