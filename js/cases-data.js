@@ -88,6 +88,58 @@
         },
       ],
     },
+    {
+      id: "003",
+      number: "003",
+      rating: 5,
+      title: "한도가 남아 있는데 왜 소액결제가 안 될까요?",
+      summary:
+        "T world에서 소액결제 한도가 남아 있는데도 결제가 반복 실패해 문의하셨으며, 정책 적용 상태와 한도·정책 차이를 안내드렸습니다.",
+      type: "결제 실패·한도 문의",
+      carrier: "SKT",
+      published: "2026-07-03",
+      detailPath: "003/",
+      related: [
+        {
+          href: "../guide/why-mobile-small-payment-not-working/",
+          title: "소액결제가 안되는 이유",
+        },
+        {
+          href: "../limit/mobile-small-payment-limit-guide/",
+          title: "소액결제 한도 총정리",
+        },
+        {
+          href: "../policy/small-payment-policy/",
+          title: "소액결제 정책이란",
+        },
+      ],
+    },
+    {
+      id: "004",
+      number: "004",
+      rating: 5,
+      title: "소액결제 정책이 있었지만 일부 이용이 가능했던 실제 상담 사례",
+      summary:
+        "매월 1일 한도 초기화 시점에 약 100만원 진행을 문의하셨으나, 과거 미납 이력으로 정책이 적용된 상태에서 약 50만원만 승인 가능했던 사례입니다.",
+      type: "정책·한도 상담",
+      carrier: "해당 통신사",
+      published: "2026-07-03",
+      detailPath: "004/",
+      related: [
+        {
+          href: "../policy/small-payment-policy/",
+          title: "소액결제 정책이란",
+        },
+        {
+          href: "../policy/how-to-check-mobile-payment-policy/",
+          title: "통신사 소액결제 정책 확인 방법",
+        },
+        {
+          href: "../overdue/mobile-payment-possible-with-overdue/",
+          title: "소액결제 미납인데 결제 가능한가",
+        },
+      ],
+    },
   ];
 
   function initCasesHeroBadges() {
