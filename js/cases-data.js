@@ -140,6 +140,32 @@
         },
       ],
     },
+    {
+      id: "005",
+      number: "005",
+      rating: 5,
+      title: "미납으로 인해 소액결제 이용이 어려웠던 실제 상담 사례",
+      summary:
+        "LG 후불 알뜰폰 이용 고객이 15만원 진행을 문의하셨으며, 상담 과정에서 미납·정책·한도를 확인한 뒤 이번에는 진행이 어려웠던 사례입니다.",
+      type: "미납·이용 불가 상담",
+      carrier: "LG U+ (알뜰폰)",
+      published: "2026-07-04",
+      detailPath: "005/",
+      related: [
+        {
+          href: "../overdue/lgu-overdue-mobile-payment/",
+          title: "LGU+ 미납과 소액결제 총정리",
+        },
+        {
+          href: "../overdue/mobile-payment-possible-with-overdue/",
+          title: "소액결제 미납인데 결제 가능한가",
+        },
+        {
+          href: "../guide/lgu-mobile-payment-not-working/",
+          title: "LGU+ 소액결제가 안되는 이유",
+        },
+      ],
+    },
   ];
 
   function initCasesHeroBadges() {
