@@ -2232,6 +2232,11 @@ textarea {
   margin-top: 48px;
 }
 
+.user-guide-hub__cases-more {
+  margin: 24px 0 0;
+  text-align: center;
+}
+
 .user-guide-hub .content-card--spaced {
   margin-top: 40px;
 }
@@ -2249,7 +2254,7 @@ textarea {
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 20px;
-  box-shadow: 0 1px 3px rgba(15, 23, 36, 0.04);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
 }
 
 .guide-consult-cta__icon {
@@ -2257,11 +2262,11 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 72px;
-  height: 72px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   background: #f3f4f6;
-  font-size: 2rem;
+  font-size: 1.625rem;
   line-height: 1;
 }
 
@@ -2290,19 +2295,19 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 0 22px;
-  border-radius: var(--radius-sm);
-  background: #1f2937;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 12px;
+  background: var(--primary);
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 15px;
   font-weight: 700;
   text-decoration: none;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: background 0.15s ease;
 }
 
 .guide-consult-cta__btn:hover {
-  background: var(--primary);
+  background: var(--primary-dark);
   color: #ffffff;
 }
 
@@ -2320,9 +2325,9 @@ textarea {
   }
 
   .guide-consult-cta__icon {
-    width: 64px;
-    height: 64px;
-    font-size: 1.75rem;
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
   }
 
   .guide-consult-cta__body h3 {
@@ -2336,6 +2341,7 @@ textarea {
 
   .guide-consult-cta__btn {
     width: 100%;
+    height: 48px;
   }
 }
 

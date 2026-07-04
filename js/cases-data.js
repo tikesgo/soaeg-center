@@ -8,7 +8,7 @@
  * 1. cases/_template/detail.index.html → cases/{id}/index.html 복사·내용 교체
  * 2. cases/_template/list-card.html → cases/index.html 카드 영역에 붙여넣기
  * 3. 아래 CASES 배열에 동일 필드 추가
- * 4. cases/index.html JSON-LD ItemList 에 ListItem 추가
+ * 4. cases/index.html JSON-LD ItemList 에 ListItem 추가 (최신순: position 1 = 최신)
  * 5. sitemap.xml 에 /cases/{id}/ URL 추가
  * 6. Hero 배지 data-cases-badge="count" 는 initCasesHeroBadges()가 자동 반영
  *
@@ -168,6 +168,39 @@
     },
   ];
 
+  function initCasesListOrder() {
+    if (typeof document === "undefined") {
+      return;
+    }
+
+    var list = document.querySelector("[data-cases-list]");
+    if (!list) {
+      return;
+    }
+
+    var cards = Array.prototype.slice.call(list.querySelectorAll("[data-case-id]"));
+    if (cards.length < 2) {
+      return;
+    }
+
+    var orderByPublished = {};
+    CASES.forEach(function (item) {
+      orderByPublished[item.id] = item.published;
+    });
+
+    cards.sort(function (a, b) {
+      var idA = a.getAttribute("data-case-id");
+      var idB = b.getAttribute("data-case-id");
+      var dateA = orderByPublished[idA] || "";
+      var dateB = orderByPublished[idB] || "";
+      return dateB.localeCompare(dateA) || idB.localeCompare(idA);
+    });
+
+    cards.forEach(function (card) {
+      list.appendChild(card);
+    });
+  }
+
   function initCasesHeroBadges() {
     if (typeof document === "undefined") {
       return;
@@ -206,6 +239,9 @@
   };
 
   if (typeof document !== "undefined") {
-    document.addEventListener("DOMContentLoaded", initCasesHeroBadges);
+    document.addEventListener("DOMContentLoaded", function () {
+      initCasesListOrder();
+      initCasesHeroBadges();
+    });
   }
 })(typeof window !== "undefined" ? window : globalThis);
