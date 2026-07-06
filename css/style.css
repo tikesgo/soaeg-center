@@ -2291,7 +2291,7 @@ textarea {
   color: var(--text-muted);
 }
 
-.guide-consult-cta__btn {
+.guide-consult-cta .guide-consult-cta__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2306,12 +2306,12 @@ textarea {
   transition: background 0.15s ease;
 }
 
-.guide-consult-cta__btn:hover {
+.guide-consult-cta .guide-consult-cta__btn:hover {
   background: var(--primary-dark);
   color: #ffffff;
 }
 
-.guide-consult-cta__btn:focus-visible {
+.guide-consult-cta .guide-consult-cta__btn:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
@@ -2339,7 +2339,7 @@ textarea {
     font-size: 0.9rem;
   }
 
-  .guide-consult-cta__btn {
+  .guide-consult-cta .guide-consult-cta__btn {
     width: 100%;
     height: 48px;
   }
