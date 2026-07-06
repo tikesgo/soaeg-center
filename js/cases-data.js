@@ -166,6 +166,32 @@
         },
       ],
     },
+    {
+      id: "006",
+      number: "006",
+      rating: 5,
+      title: "콘텐츠결제를 이미 이용했지만 추가로 소액결제를 진행했던 실제 상담 사례",
+      summary:
+        "SKT 이용 고객이 콘텐츠결제 50만원 이용 후 추가 자금이 필요해 문의하셨으며, 상담 과정에서 소액결제 100만원 진행과 요금 청구 시점을 안내드렸습니다.",
+      type: "콘텐츠결제·소액결제 상담",
+      carrier: "SKT",
+      published: "2026-07-06",
+      detailPath: "006/",
+      related: [
+        {
+          href: "../guide/mobile-payment-user-guide/",
+          title: "휴대폰 소액결제 이용가이드",
+        },
+        {
+          href: "../limit/mobile-small-payment-limit-guide/",
+          title: "소액결제 한도 총정리",
+        },
+        {
+          href: "../guide/how-to-use-mobile-small-payment/",
+          title: "휴대폰 소액결제 이용방법",
+        },
+      ],
+    },
   ];
 
   function initCasesListOrder() {
