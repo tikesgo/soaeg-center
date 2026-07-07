@@ -2346,6 +2346,10 @@ textarea {
 }
 
 /* FAQ hub — category navigation cards */
+.faq-hub-page {
+  --faq-icon-policy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 2 4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4z'/%3E%3Cpath fill='%23000' d='M10.4 12.4 12.2 14.2 16.1 10.1 14.6 8.6 12.2 11.1 10.4 9.3z'/%3E%3C/svg%3E");
+}
+
 .faq-hub-page .faq-hub__nav {
   margin-bottom: 24px;
 }
@@ -2399,6 +2403,35 @@ textarea {
   flex-shrink: 0;
   font-size: 1.35rem;
   line-height: 1.2;
+}
+
+.faq-hub__nav-card[href="#faq-policy"] .faq-hub__nav-card-icon,
+#faq-policy .faq-hub__item-icon {
+  font-size: 0;
+}
+
+.faq-hub__nav-card[href="#faq-policy"] .faq-hub__nav-card-icon::before,
+#faq-policy .faq-hub__item-icon::before {
+  content: "";
+  display: block;
+  background-color: var(--primary);
+  -webkit-mask: var(--faq-icon-policy) center / contain no-repeat;
+  mask: var(--faq-icon-policy) center / contain no-repeat;
+}
+
+.faq-hub__nav-card[href="#faq-policy"] .faq-hub__nav-card-icon::before {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+#faq-policy .faq-hub__item-icon::before {
+  width: 2rem;
+  height: 2rem;
+}
+
+.faq-hub-page:has(#faq-policy:target) .faq-hub__nav-card[href="#faq-policy"] .faq-hub__nav-card-icon::before,
+.faq-hub__nav-card[href="#faq-policy"].is-active .faq-hub__nav-card-icon::before {
+  background-color: #ffffff;
 }
 
 .faq-hub__nav-card-body {
@@ -2536,15 +2569,11 @@ textarea {
 }
 
 #faq-usage .faq-hub__item-icon::before {
-  content: "📱";
+  content: "📘";
 }
 
 #faq-limit .faq-hub__item-icon::before {
   content: "📊";
-}
-
-#faq-policy .faq-hub__item-icon::before {
-  content: "🛡";
 }
 
 #faq-overdue .faq-hub__item-icon::before {

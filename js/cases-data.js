@@ -37,6 +37,32 @@
   /** @type {CaseItem[]} */
   var CASES = [
     {
+      id: "007",
+      number: "007",
+      rating: 5,
+      title: "휴대폰 요금 미납 중이었지만 일부 금액만 이용 가능했던 실제 상담 사례",
+      summary:
+        "30대 남성 고객이 미납 상태에서 30만원 이용을 희망했으나, 상담 과정에서 결제사·이용 이력을 확인한 뒤 10만원만 진행된 사례입니다.",
+      type: "미납·일부 이용 상담",
+      carrier: "미기재",
+      published: "2026-07-07",
+      detailPath: "007/",
+      related: [
+        {
+          href: "../faq/",
+          title: "자주 묻는 질문 (FAQ)",
+        },
+        {
+          href: "../guide/mobile-payment-user-guide/",
+          title: "휴대폰 소액결제 이용가이드",
+        },
+        {
+          href: "../guide/mobile-payment-usage-precautions/",
+          title: "소액결제 이용 시 주의사항",
+        },
+      ],
+    },
+    {
       id: "001",
       number: "001",
       rating: 5,
