@@ -174,6 +174,10 @@ textarea {
   font-weight: 600;
 }
 
+.site-logo[aria-current="page"] span {
+  color: var(--primary);
+}
+
 .site-nav {
   display: none;
   align-items: center;

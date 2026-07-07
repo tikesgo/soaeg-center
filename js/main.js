@@ -319,16 +319,20 @@
 
   function initSiteNavActive() {
     var currentSection = pathToSection(window.location.pathname);
-    var navs = $all(".site-nav, [data-mobile-nav]");
+    var navLinks = $all(".site-nav a, [data-mobile-nav] a, .site-logo[data-nav-section]");
 
-    navs.forEach(function (nav) {
-      $all("a", nav).forEach(function (link) {
-        link.removeAttribute("aria-current");
+    navLinks.forEach(function (link) {
+      link.removeAttribute("aria-current");
 
-        if (currentSection && getLinkSection(link) === currentSection) {
-          link.setAttribute("aria-current", "page");
-        }
-      });
+      if (!currentSection) {
+        return;
+      }
+
+      var section = link.getAttribute("data-nav-section") || getLinkSection(link);
+
+      if (section === currentSection) {
+        link.setAttribute("aria-current", "page");
+      }
     });
   }
 })();
