@@ -220,6 +220,44 @@
     },
   ];
 
+  function initCashoutHubCases() {
+    if (typeof document === "undefined") {
+      return;
+    }
+
+    var container = document.querySelector("[data-cashout-cases]");
+    if (!container) {
+      return;
+    }
+
+    var recent = CASES.slice().sort(function (a, b) {
+      return b.published.localeCompare(a.published) || b.id.localeCompare(a.id);
+    }).slice(0, 5);
+
+    container.innerHTML = recent
+      .map(function (item) {
+        return (
+          '<article class="case-card">' +
+          '<p class="case-card__label">실제 상담 사례 #' +
+          item.number +
+          "</p>" +
+          '<h3 class="case-card__title">' +
+          item.title +
+          "</h3>" +
+          '<p class="case-card__summary">' +
+          item.summary +
+          "</p>" +
+          '<div class="case-card__action">' +
+          '<a class="btn btn--primary btn--block" href="../cases/' +
+          item.detailPath +
+          '">자세히 보기</a>' +
+          "</div>" +
+          "</article>"
+        );
+      })
+      .join("");
+  }
+
   function initCasesListOrder() {
     if (typeof document === "undefined") {
       return;
@@ -294,6 +332,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       initCasesListOrder();
       initCasesHeroBadges();
+      initCashoutHubCases();
     });
   }
 })(typeof window !== "undefined" ? window : globalThis);

@@ -279,6 +279,7 @@
     var root = "/" + path.split("/").filter(Boolean)[0];
     var sections = {
       "/guide": "guide",
+      "/mobile-payment-cashout": "cashout",
       "/policy": "policy",
       "/limit": "limit",
       "/cases": "cases",

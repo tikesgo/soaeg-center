@@ -2245,6 +2245,32 @@ textarea {
   margin-top: 40px;
 }
 
+/* Cashout hub */
+.cashout-hub .page-hero .hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cashout-hub__process {
+  margin-bottom: 40px;
+}
+
+.hub-link-card--static {
+  cursor: default;
+}
+
+.hub-link-card--static:hover {
+  transform: none;
+  border-color: var(--line);
+  box-shadow: var(--shadow-card-inset), var(--shadow-card);
+}
+
+.cashout-hub__checklist {
+  margin-top: 8px;
+}
+
 /* User guide hub — minimal consult CTA */
 .guide-consult-cta {
   display: flex;
