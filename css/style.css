@@ -2271,6 +2271,41 @@ textarea {
   margin-top: 8px;
 }
 
+.cashout-figure {
+  max-width: 920px;
+  margin: 44px auto;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.cashout-figure img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+
+.cashout-figure__desc {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #475569;
+  margin-top: 16px;
+}
+
+.cashout-hub #cashout-about h3:not(:first-of-type) {
+  margin-top: 48px;
+}
+
+@media (max-width: 767px) {
+  .cashout-figure {
+    margin: 32px auto;
+    padding: 12px;
+    border-radius: 18px;
+  }
+}
+
 /* User guide hub — minimal consult CTA */
 .guide-consult-cta {
   display: flex;
