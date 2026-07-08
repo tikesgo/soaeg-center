@@ -2271,6 +2271,67 @@ textarea {
   margin-top: 8px;
 }
 
+.cashout-section-title {
+  margin-bottom: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cashout-section-title__eyebrow {
+  display: inline-block;
+  margin: 0 0 10px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+}
+
+.cashout-section-title h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.cashout-section-title p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #475569;
+}
+
+.cashout-hub #cashout-about {
+  font-size: 1.03rem;
+  line-height: 1.95;
+}
+
+.cashout-hub #cashout-about p {
+  margin-bottom: 22px;
+}
+
+.cashout-hub #cashout-about h3 {
+  margin-top: 48px;
+  margin-bottom: 16px;
+  font-size: 1.35rem;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.cashout-hub #cashout-about h3:first-of-type {
+  margin-top: 0;
+}
+
+.cashout-hub #cashout-about h3:not(:first-of-type) {
+  padding-top: 32px;
+  border-top: 1px solid #e8edf2;
+}
+
+.cashout-hub #cashout-about .legal-list {
+  margin: 28px 0 32px;
+}
+
 .cashout-figure {
   max-width: 920px;
   margin: 44px auto;
@@ -2292,10 +2353,7 @@ textarea {
   line-height: 1.8;
   color: #475569;
   margin-top: 16px;
-}
-
-.cashout-hub #cashout-about h3:not(:first-of-type) {
-  margin-top: 48px;
+  margin-bottom: 28px;
 }
 
 @media (max-width: 767px) {
