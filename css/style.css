@@ -2275,6 +2275,7 @@ textarea {
   margin-bottom: 40px;
   padding-bottom: 28px;
   border-bottom: 1px solid #e5e7eb;
+  text-align: left;
 }
 
 .cashout-section-title__eyebrow {
@@ -2287,24 +2288,26 @@ textarea {
 }
 
 .cashout-section-title h2 {
-  margin: 0 0 12px;
-  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 3vw, 2.6rem);
   font-weight: 800;
-  line-height: 1.35;
+  line-height: 1.25;
   letter-spacing: -0.02em;
   color: var(--text);
 }
 
 .cashout-section-title p {
   margin: 0;
+  max-width: 760px;
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.8;
   color: #475569;
 }
 
 .cashout-hub #cashout-about {
   font-size: 1.03rem;
   line-height: 1.95;
+  text-align: left;
 }
 
 .cashout-hub #cashout-about p {
@@ -2314,9 +2317,11 @@ textarea {
 .cashout-hub #cashout-about h3 {
   margin-top: 48px;
   margin-bottom: 16px;
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   line-height: 1.45;
   font-weight: 800;
+  color: #0f172a;
+  text-align: left;
 }
 
 .cashout-hub #cashout-about h3:first-of-type {
