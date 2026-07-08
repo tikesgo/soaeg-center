@@ -37,6 +37,36 @@
   /** @type {CaseItem[]} */
   var CASES = [
     {
+      id: "008",
+      number: "008",
+      rating: 5,
+      title: "KT 아이폰 고객, 체크카드 결제 오류를 해결하고 145만원 전액 진행한 실제 상담사례",
+      summary:
+        "40대 초반 KT 아이폰 고객이 소액결제 45만원·콘텐츠결제 100만원 총 145만원을 문의하셨으며, App Store 체크카드 결제 2건을 취소한 뒤 휴대폰결제로 전액 진행된 사례입니다.",
+      type: "휴대폰 소액결제 + 콘텐츠결제",
+      carrier: "KT",
+      published: "2026-07-08",
+      detailPath: "008/",
+      related: [
+        {
+          href: "../faq/",
+          title: "자주 묻는 질문 (FAQ)",
+        },
+        {
+          href: "../guide/how-to-use-mobile-small-payment/",
+          title: "휴대폰 소액결제 이용방법",
+        },
+        {
+          href: "../mobile-payment-cashout/",
+          title: "휴대폰 소액결제 현금화 안내",
+        },
+        {
+          href: "../guide/mobile-payment-usage-precautions/",
+          title: "소액결제 이용 시 주의사항",
+        },
+      ],
+    },
+    {
       id: "007",
       number: "007",
       rating: 5,
