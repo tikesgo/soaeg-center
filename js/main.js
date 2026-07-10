@@ -79,7 +79,13 @@
   }
 
   applyContactValues();
-  initChannelTalk();
+
+  try {
+    initChannelTalk();
+  } catch (error) {
+    console.error("Channel Talk init failed:", error);
+  }
+
   initHeroSlider();
 
   function initHeroSlider() {
