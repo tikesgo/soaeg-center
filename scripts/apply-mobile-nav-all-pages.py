@@ -33,31 +33,9 @@ def build_mobile_nav(html: str) -> str | None:
     nav_links = nav_match.group(1).strip()
     nav_links = re.sub(r"\n\s{10}", "\n      ", nav_links)
 
-    actions_match = re.search(
-        r'<div class="header-actions">\s*((?:<a\b[^>]*>.*?</a>\s*)+)',
-        html,
-        re.DOTALL,
-    )
-    actions = ""
-    if actions_match:
-        action_links = re.findall(r"<a\b[^>]*>.*?</a>", actions_match.group(1), re.DOTALL)
-        if action_links:
-            block_links = []
-            for link in action_links[:2]:
-                block = link
-                if "btn--block" not in block:
-                    block = block.replace('class="', 'class="btn--block ', 1)
-                block_links.append("      " + block)
-            actions = (
-                "\n      <div class=\"mobile-nav__actions\">\n"
-                + "\n".join(block_links)
-                + "\n      </div>"
-            )
-
     return (
         "\n    <nav class=\"mobile-nav\" id=\"mobileNav\" data-mobile-nav aria-label=\"모바일 메뉴\">\n"
         f"      {nav_links}\n"
-        f"{actions}\n"
         "    </nav>\n"
     )
 

@@ -52,6 +52,12 @@ for (const path of PAGES) {
   const openClass = await page.locator("[data-mobile-nav]").evaluate((el) => el.classList.contains("is-open"));
   if (expandedOpen !== "true" || !openClass) errors.push("menu did not open");
 
+  const actionButtons = await page.locator("[data-mobile-nav] .mobile-nav__actions").count();
+  if (actionButtons) errors.push("mobile-nav__actions should be removed");
+
+  const navLinkCount = await page.locator("[data-mobile-nav] > a").count();
+  if (navLinkCount !== 8) errors.push(`expected 8 mobile nav links, got ${navLinkCount}`);
+
   await toggle.click();
   const expandedClosed = await toggle.getAttribute("aria-expanded");
   const closedClass = await page.locator("[data-mobile-nav]").evaluate((el) => el.classList.contains("is-open"));
