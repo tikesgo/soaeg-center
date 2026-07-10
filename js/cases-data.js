@@ -37,6 +37,40 @@
   /** @type {CaseItem[]} */
   var CASES = [
     {
+      id: "009",
+      number: "009",
+      rating: 5,
+      title: "KT 고객, 10만원 분할 결제 문의 후 남은 70만원 전액 진행한 실제 상담사례",
+      summary:
+        "30대 남성 KT 고객이 월초 소액결제 30만원 이용 후 남은 70만원 진행을 문의하셨으며, 10만원 분할 결제 방식에 대한 질문 후 전액 정상 진행된 사례입니다.",
+      type: "한도·분할 결제 상담",
+      carrier: "KT",
+      published: "2026-07-10",
+      detailPath: "009/",
+      related: [
+        {
+          href: "../guide/kt-mobile-payment-not-working/",
+          title: "KT 소액결제가 안 되는 이유",
+        },
+        {
+          href: "../policy/small-payment-policy/",
+          title: "소액결제 신규정책",
+        },
+        {
+          href: "../limit/mobile-small-payment-limit-guide/",
+          title: "소액결제 한도 확인 방법",
+        },
+        {
+          href: "../mobile-payment-cashout/",
+          title: "휴대폰 소액결제 현금화 종합 안내",
+        },
+        {
+          href: "../cases/",
+          title: "상담사례 전체 보기",
+        },
+      ],
+    },
+    {
       id: "008",
       number: "008",
       rating: 5,
