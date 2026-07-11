@@ -37,6 +37,40 @@
   /** @type {CaseItem[]} */
   var CASES = [
     {
+      id: "010",
+      number: "010",
+      rating: 5,
+      title: "SKT 이용 고객, 본인 한도 사용 후 배우자 명의로 진행한 실제 상담사례",
+      summary:
+        "50대 남성 SKT 고객이 본인 명의 한도 50만원 사용 후 배우자 명의 휴대폰으로 진행을 문의하셨으며, 명의자 확인 절차를 거친 뒤 30만원이 진행된 사례입니다.",
+      type: "가족 명의·명의자 확인 상담",
+      carrier: "SKT",
+      published: "2026-07-11",
+      detailPath: "010/",
+      related: [
+        {
+          href: "../policy/small-payment-policy/",
+          title: "소액결제 정책 안내",
+        },
+        {
+          href: "../guide/how-to-use-mobile-small-payment/",
+          title: "휴대폰 소액결제 이용방법",
+        },
+        {
+          href: "../limit/mobile-small-payment-limit-guide/",
+          title: "소액결제 한도 확인 방법",
+        },
+        {
+          href: "../mobile-payment-cashout/",
+          title: "휴대폰 소액결제 현금화 종합 안내",
+        },
+        {
+          href: "../faq/",
+          title: "자주 묻는 질문 (FAQ)",
+        },
+      ],
+    },
+    {
       id: "009",
       number: "009",
       rating: 5,
