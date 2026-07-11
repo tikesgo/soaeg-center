@@ -2261,6 +2261,10 @@ textarea {
   margin-top: 0;
 }
 
+.cashout-hub__situation-head {
+  margin-bottom: 16px;
+}
+
 .cashout-situation-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2279,16 +2283,45 @@ textarea {
   height: 100%;
 }
 
-.cashout-hub__situation-lead {
-  margin: 18px 0 0;
-  font-size: 0.9rem;
-  font-weight: 500;
-  line-height: 1.7;
-  color: var(--text-muted);
-}
+@media (max-width: 639px) {
+  .cashout-hub .page-content {
+    padding-top: 20px;
+  }
 
-.cashout-hub__situation-lead a {
-  font-weight: 700;
+  .cashout-hub__situation-head {
+    margin-bottom: 12px;
+  }
+
+  .cashout-hub__situation .section-head h2 {
+    margin-bottom: 6px;
+    font-size: 1.2rem;
+  }
+
+  .cashout-hub__situation .section-head p {
+    font-size: 0.875rem;
+  }
+
+  .cashout-situation-grid {
+    row-gap: 6px;
+    column-gap: 12px;
+  }
+
+  .cashout-situation-grid .hub-link-card {
+    padding: 16px 18px;
+  }
+
+  .cashout-situation-grid .hub-link-card__head {
+    margin-bottom: 6px;
+  }
+
+  .cashout-situation-grid .hub-link-card__desc {
+    margin-bottom: 10px;
+    line-height: 1.45;
+  }
+
+  .cashout-hub-page .site-logo span {
+    display: none;
+  }
 }
 
 .cashout-recent-inquiry {
