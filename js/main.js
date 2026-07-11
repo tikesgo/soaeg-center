@@ -50,7 +50,97 @@
     ChannelIO("showMessenger");
   }
 
-  function openConsultation() {
+  function trackChannelTalkClick(buttonLocation) {
+    if (typeof window.gtag !== "function" || !buttonLocation) {
+      return;
+    }
+
+    window.gtag("event", "channel_talk_click", {
+      button_location: buttonLocation,
+    });
+  }
+
+  function getPageContext() {
+    var section = pathToSection(window.location.pathname);
+
+    if (section === "cashout") {
+      return "cashout_hub";
+    }
+
+    if (section) {
+      return section;
+    }
+
+    var path = normalizePath(window.location.pathname);
+
+    if (path === "/") {
+      return "main";
+    }
+
+    if (path === "/terms" || path === "/privacy") {
+      return "legal";
+    }
+
+    if (path.indexOf("/overdue") === 0) {
+      return "overdue";
+    }
+
+    return "other";
+  }
+
+  function resolveButtonLocation(trigger) {
+    if (!trigger) {
+      return "unknown";
+    }
+
+    var explicit = trigger.getAttribute("data-contact-location");
+    if (explicit) {
+      return explicit;
+    }
+
+    if (trigger.closest(".float-cta")) {
+      return "floating";
+    }
+
+    if (trigger.closest(".hero")) {
+      return "hero";
+    }
+
+    if (trigger.closest(".site-header") || trigger.closest(".header-actions") || trigger.closest(".mobile-nav")) {
+      return "header";
+    }
+
+    if (trigger.closest(".guide-consult-cta")) {
+      var ctaContext = getPageContext();
+      if (ctaContext === "cashout_hub") {
+        return "cashout_hub_cta";
+      }
+      if (ctaContext === "faq") {
+        return "faq_cta";
+      }
+      if (ctaContext === "cases") {
+        return "cases_cta";
+      }
+      if (ctaContext === "guide") {
+        return "guide_cta";
+      }
+      return "cta";
+    }
+
+    if (trigger.closest(".site-footer") || trigger.closest("#footer-contact")) {
+      return "footer";
+    }
+
+    return getPageContext() + "_cta";
+  }
+
+  function openConsultation(buttonLocation, options) {
+    var shouldTrack = !(options && options.track === false);
+
+    if (shouldTrack && buttonLocation) {
+      trackChannelTalkClick(buttonLocation);
+    }
+
     openChannelMessenger();
     closeMobileNavIfOpen();
   }
@@ -220,8 +310,17 @@
   $all("[data-contact-modal]").forEach(function (trigger) {
     trigger.addEventListener("click", function (event) {
       event.preventDefault();
-      openConsultation();
+      openConsultation(resolveButtonLocation(trigger));
     });
+  });
+
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest('a[href*="#open-contact"]');
+    if (!link) {
+      return;
+    }
+
+    trackChannelTalkClick(resolveButtonLocation(link));
   });
 
   var header = $(".site-header");
@@ -260,7 +359,7 @@
   });
 
   if (window.location.hash === "#open-contact") {
-    openConsultation();
+    openConsultation(null, { track: false });
   }
 
   initSiteNavActive();
