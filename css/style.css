@@ -2257,6 +2257,212 @@ textarea {
   margin-bottom: 40px;
 }
 
+.cashout-hub__situation {
+  margin-top: 0;
+}
+
+.cashout-situation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cashout-situation-grid > li {
+  margin: 0;
+  list-style: none;
+}
+
+.cashout-situation-grid .hub-link-card {
+  height: 100%;
+}
+
+.cashout-hub__situation-lead {
+  margin: 18px 0 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.cashout-hub__situation-lead a {
+  font-weight: 700;
+}
+
+.cashout-recent-inquiry {
+  margin: 28px 0 8px;
+}
+
+.cashout-inquiry-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cashout-inquiry-grid > li {
+  margin: 0;
+  list-style: none;
+}
+
+.cashout-inquiry-grid .hub-link-card {
+  height: 100%;
+}
+
+.cashout-recent-inquiry .section-head {
+  margin-bottom: 16px;
+}
+
+.cashout-recent-inquiry .section-head h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.cashout-recent-inquiry .section-head p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.cashout-cases-pick__more {
+  margin-bottom: 8px;
+}
+
+.cashout-eligibility-table {
+  margin: 24px 0 8px;
+  padding: 22px 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: var(--shadow-card-inset), var(--shadow-card);
+}
+
+.cashout-eligibility-table__title {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.cashout-eligibility-table__lead {
+  margin: 0 0 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.cashout-eligibility-table__grid {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cashout-eligibility-table__grid th,
+.cashout-eligibility-table__grid td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.cashout-eligibility-table__grid th {
+  font-weight: 800;
+  color: var(--text);
+  background: #f8fafc;
+}
+
+.cashout-eligibility-table__grid td {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.cashout-eligibility-table__grid td:first-child {
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.cashout-eligibility-table__grid tbody tr:last-child th,
+.cashout-eligibility-table__grid tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cashout-eligibility-table__grid a {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .cashout-situation-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .cashout-inquiry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 639px) {
+  .cashout-eligibility-table {
+    padding: 18px 16px;
+  }
+
+  .cashout-eligibility-table__grid thead {
+    display: none;
+  }
+
+  .cashout-eligibility-table__grid tbody tr {
+    display: block;
+    margin-bottom: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #ffffff;
+  }
+
+  .cashout-eligibility-table__grid tbody tr:last-child {
+    margin-bottom: 0;
+  }
+
+  .cashout-eligibility-table__grid td {
+    display: block;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .cashout-eligibility-table__grid td + td {
+    margin-top: 10px;
+  }
+
+  .cashout-eligibility-table__grid td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--text);
+  }
+
+  .cashout-eligibility-table__grid td:first-child {
+    font-size: 0.95rem;
+    white-space: normal;
+  }
+
+  .cashout-eligibility-table__grid td:first-child::before {
+    display: none;
+  }
+}
+
 .hub-link-card--static {
   cursor: default;
 }
