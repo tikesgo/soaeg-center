@@ -11,6 +11,7 @@
  * 4. cases/index.html JSON-LD ItemList 에 ListItem 추가 (최신순: position 1 = 최신)
  * 5. sitemap.xml 에 /cases/{id}/ URL 추가
  * 6. Hero 배지 data-cases-badge="count" 는 initCasesHeroBadges()가 자동 반영
+ * 7. 목록 페이지네이션: 1페이지 /cases/ (최신 10건), 2페이지+ /cases/page/N/
  *
  * 템플릿 위치: cases/_template/
  * 라이브 참고: cases/001/index.html, cases/index.html 내 case-card
@@ -352,6 +353,51 @@
     },
   ];
 
+  var CASES_PER_PAGE = 10;
+
+  function getSortedCases() {
+    return CASES.slice().sort(function (a, b) {
+      return b.published.localeCompare(a.published) || b.id.localeCompare(a.id);
+    });
+  }
+
+  function getTotalPages() {
+    return Math.ceil(CASES.length / CASES_PER_PAGE);
+  }
+
+  function getCaseListName(item) {
+    return "실제 상담 사례 #" + item.number + " — " + item.title;
+  }
+
+  function getPageCases(page) {
+    var pageNumber = Math.max(1, parseInt(page, 10) || 1);
+    var sorted = getSortedCases();
+    var start = (pageNumber - 1) * CASES_PER_PAGE;
+    return sorted.slice(start, start + CASES_PER_PAGE);
+  }
+
+  function getGlobalPosition(caseId) {
+    var sorted = getSortedCases();
+    var index = -1;
+
+    for (var i = 0; i < sorted.length; i += 1) {
+      if (sorted[i].id === caseId) {
+        index = i;
+        break;
+      }
+    }
+
+    return index === -1 ? 0 : index + 1;
+  }
+
+  function getListPagePath(page) {
+    var pageNumber = Math.max(1, parseInt(page, 10) || 1);
+    if (pageNumber <= 1) {
+      return "/cases/";
+    }
+    return "/cases/page/" + pageNumber + "/";
+  }
+
   function initCashoutHubCases() {
     if (typeof document === "undefined") {
       return;
@@ -452,7 +498,14 @@
 
   global.SOAEG_CASES = {
     listPath: "/cases/",
+    perPage: CASES_PER_PAGE,
     items: CASES,
+    getSortedCases: getSortedCases,
+    getTotalPages: getTotalPages,
+    getPageCases: getPageCases,
+    getGlobalPosition: getGlobalPosition,
+    getCaseListName: getCaseListName,
+    getListPagePath: getListPagePath,
     getById: function (id) {
       return CASES.find(function (item) {
         return item.id === id;
