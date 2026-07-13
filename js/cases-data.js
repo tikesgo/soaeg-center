@@ -37,6 +37,40 @@
   /** @type {CaseItem[]} */
   var CASES = [
     {
+      id: "011",
+      number: "011",
+      rating: 5,
+      title: "LG U+ 휴대폰 소액결제 처음 이용한 고객 상담사례",
+      summary:
+        "20대 여성 LG U+ 고객이 휴대폰 소액결제를 처음 이용하며 유선 상담으로 20만원 진행을 문의하셨고, 이용 절차와 확인사항 안내 후 필요 금액만 진행된 사례입니다.",
+      type: "처음 이용·금액 조정 상담",
+      carrier: "LG U+",
+      published: "2026-07-13",
+      detailPath: "011/",
+      related: [
+        {
+          href: "../guide/mobile-payment-user-guide/",
+          title: "휴대폰 소액결제 이용방법",
+        },
+        {
+          href: "../guide/mobile-payment-before-checklist/",
+          title: "소액결제 이용 전 확인사항",
+        },
+        {
+          href: "../limit/mobile-small-payment-limit-guide/",
+          title: "소액결제 한도 확인 방법",
+        },
+        {
+          href: "../mobile-payment-cashout/",
+          title: "휴대폰 소액결제 종합 안내",
+        },
+        {
+          href: "../faq/",
+          title: "자주 묻는 질문 (FAQ)",
+        },
+      ],
+    },
+    {
       id: "010",
       number: "010",
       rating: 5,
