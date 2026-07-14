@@ -38,6 +38,40 @@
   /** @type {CaseItem[]} */
   var CASES = [
     {
+      id: "012",
+      number: "012",
+      rating: 5,
+      title: "KT 미납 고객 상담사례",
+      summary:
+        "50대 여성 KT 고객이 요금 미납 상태에서 50만원 이용을 문의하셨으며, 현재 이용 상태 확인 결과 소액결제는 진행되지 않았고 콘텐츠이용료 30만원이 진행된 사례입니다.",
+      type: "미납·콘텐츠이용료 상담",
+      carrier: "KT",
+      published: "2026-07-15",
+      detailPath: "012/",
+      related: [
+        {
+          href: "../overdue/kt-overdue-mobile-payment/",
+          title: "KT 미납과 소액결제 안내",
+        },
+        {
+          href: "../overdue/mobile-payment-overdue-guide/",
+          title: "소액결제 미납 안내",
+        },
+        {
+          href: "../guide/mobile-payment-user-guide/",
+          title: "휴대폰 소액결제 이용방법",
+        },
+        {
+          href: "../mobile-payment-cashout/",
+          title: "휴대폰 소액결제 종합 안내",
+        },
+        {
+          href: "../faq/",
+          title: "자주 묻는 질문 (FAQ)",
+        },
+      ],
+    },
+    {
       id: "011",
       number: "011",
       rating: 5,
