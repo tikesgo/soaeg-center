@@ -320,7 +320,12 @@
       return;
     }
 
-    trackChannelTalkClick(resolveButtonLocation(link));
+    if (link.hasAttribute("data-contact-modal")) {
+      return;
+    }
+
+    event.preventDefault();
+    openConsultation(resolveButtonLocation(link));
   });
 
   var header = $(".site-header");
