@@ -38,6 +38,40 @@
   /** @type {CaseItem[]} */
   var CASES = [
     {
+      id: "013",
+      number: "013",
+      rating: 5,
+      title: "KT 외국인 고객 상담사례",
+      summary:
+        "KT를 이용 중인 외국인 고객이 선불 유심 소액결제 가능 여부를 문의하셨으며, 회선 확인 결과 한도 40만원이 확인된 뒤 필요 금액 30만원이 정상 승인된 사례입니다.",
+      type: "외국인·이용 가능 여부 상담",
+      carrier: "KT",
+      published: "2026-08-08",
+      detailPath: "013/",
+      related: [
+        {
+          href: "../guide/mobile-payment-user-guide/",
+          title: "휴대폰 소액결제 이용방법",
+        },
+        {
+          href: "../limit/mobile-small-payment-limit-guide/",
+          title: "소액결제 한도 확인 방법",
+        },
+        {
+          href: "../policy/small-payment-policy/",
+          title: "소액결제 정책 안내",
+        },
+        {
+          href: "../mobile-payment-cashout/",
+          title: "휴대폰 소액결제 종합 안내",
+        },
+        {
+          href: "../faq/",
+          title: "자주 묻는 질문 (FAQ)",
+        },
+      ],
+    },
+    {
       id: "012",
       number: "012",
       rating: 5,
